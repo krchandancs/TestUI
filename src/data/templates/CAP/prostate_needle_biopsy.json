@@ -1,0 +1,1117 @@
+{
+  "id": "prostate_needle_biopsy",
+  "name": "Protocol for the Examination of Prostate Needle Biopsies From Patients With Carcinoma of the Prostate Gland: Case Level Reporting",
+  "source": "CAP",
+  "version": "1.1.0.0",
+  "category": "PROSTATE",
+  "sections": [
+    {
+      "id": "case_summary",
+      "title": "CASE SUMMARY",
+      "fields": [
+        {
+          "id": "case_summary_note",
+          "label": "Case Summary Applicability",
+          "type": "text",
+          "required": true,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "procedure",
+      "title": "Procedure",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "procedure_systematic_biopsy",
+              "label": "Systematic biopsy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "procedure_targeted_biopsy",
+              "label": "Targeted biopsy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "procedure_other_specify",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "positive_specimens_or_zones",
+      "title": "POSITIVE SPECIMEN(S) OR ZONE(S)",
+      "fields": [
+        {
+          "id": "positive_specimen_locations",
+          "label": "Positive Specimen Location(s)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "positive_right",
+              "label": "Right",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "positive_left",
+              "label": "Left",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "positive_other_trus_lesion",
+              "label": "Other Transrectal Ultrasound (TRUS) lesion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "positive_mri_guided_biopsy",
+              "label": "MRI-guided Biopsy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "positive_other_specify",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "histologic_type",
+      "title": "Histologic Type",
+      "fields": [
+        {
+          "id": "histologic_glandular",
+          "label": "Glandular",
+          "type": "text",
+          "required": false,
+          "options": [
+            {
+              "id": "acinar_usual",
+              "label": "Acinar adenocarcinoma, conventional (usual)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "acinar_signet_ring_like",
+              "label": "Acinar adenocarcinoma, signet-ring-like cell",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "acinar_pleomorphic_giant",
+              "label": "Acinar adenocarcinoma, pleomorphic giant cell",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "acinar_sarcomatoid",
+              "label": "Acinar adenocarcinoma, sarcomatoid",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "acinar_pin_like",
+              "label": "Acinar adenocarcinoma, prostatic intraepithelial neoplasia-like",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "isolated_idc",
+              "label": "Isolated intraductal carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "ductal_adenocarcinoma",
+              "label": "Ductal adenocarcinoma",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "histologic_squamous",
+          "label": "Squamous",
+          "type": "text",
+          "required": false,
+          "options": [
+            {
+              "id": "adenosquamous_carcinoma",
+              "label": "Adenosquamous carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "squamous_cell_carcinoma",
+              "label": "Squamous cell carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "basal_cell_carcinoma",
+              "label": "Basal cell (adenoid cystic) carcinoma",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "histologic_neuroendocrine",
+          "label": "Neuroendocrine",
+          "type": "text",
+          "required": false,
+          "options": [
+            {
+              "id": "adenoca_ne_diff",
+              "label": "Adenocarcinoma with neuroendocrine differentiation",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "well_diff_ne_tumor",
+              "label": "Well-differentiated neuroendocrine tumor",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "small_cell_ne_carcinoma",
+              "label": "Small cell neuroendocrine carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "large_cell_ne_carcinoma",
+              "label": "Large cell neuroendocrine carcinoma",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "histologic_other",
+          "label": "Other / NOS",
+          "type": "text",
+          "required": false,
+          "options": [
+            {
+              "id": "other_histologic_type_specify",
+              "label": "Other histologic type not listed (specify)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "carcinoma_type_cannot_be_determined",
+              "label": "Carcinoma, type cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "histologic_type_comment",
+          "label": "Histologic Type Comment",
+          "type": "longtext",
+          "required": false,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "histologic_grade",
+      "title": "Histologic Grade",
+      "fields": [
+        {
+          "id": "highest_gleason_score",
+          "label": "Highest Gleason Score",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "gg1_3_3_6",
+              "label": "Grade group 1 (Gleason Score 3 + 3 = 6)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg2_3_4_7",
+              "label": "Grade group 2 (Gleason Score 3 + 4 = 7)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg3_4_3_7",
+              "label": "Grade group 3 (Gleason Score 4 + 3 = 7)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg4_4_4_8",
+              "label": "Grade group 4 (Gleason Score 4 + 4 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg4_3_5_8",
+              "label": "Grade group 4 (Gleason Score 3 + 5 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg4_5_3_8",
+              "label": "Grade group 4 (Gleason Score 5 + 3 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg5_4_5_9",
+              "label": "Grade group 5 (Gleason Score 4 + 5 = 9)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg5_5_4_9",
+              "label": "Grade group 5 (Gleason Score 5 + 4 = 9)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gg5_5_5_10",
+              "label": "Grade group 5 (Gleason Score 5 + 5 = 10)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "highest_gleason_cannot_be_assessed",
+              "label": "Cannot be assessed",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "highest_gleason_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "sites_with_highest_gleason",
+          "label": "Site(s) with Highest Gleason Score",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "highest_right",
+              "label": "Right",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "highest_left",
+              "label": "Left",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "highest_other_trus_lesion",
+              "label": "Other Transrectal Ultrasound (TRUS) lesion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "highest_mri_guided_biopsy",
+              "label": "MRI-guided Biopsy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "highest_other_specify",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "overall_grade",
+      "title": "Overall Grade",
+      "fields": [
+        {
+          "id": "systematic_overall_grade",
+          "label": "Systematic Biopsy Overall Grade",
+          "type": "text",
+          "required": false,
+          "options": [
+            {
+              "id": "sys_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_cannot_be_assessed",
+              "label": "Cannot be assessed",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg1_3_3_6",
+              "label": "Grade group 1 (Gleason Score 3 + 3 = 6)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg2_3_4_7",
+              "label": "Grade group 2 (Gleason Score 3 + 4 = 7)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg3_4_3_7",
+              "label": "Grade group 3 (Gleason Score 4 + 3 = 7)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg4_4_4_8",
+              "label": "Grade group 4 (Gleason Score 4 + 4 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg4_3_5_8",
+              "label": "Grade group 4 (Gleason Score 3 + 5 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg4_5_3_8",
+              "label": "Grade group 4 (Gleason Score 5 + 3 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg5_4_5_9",
+              "label": "Grade group 5 (Gleason Score 4 + 5 = 9)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg5_5_4_9",
+              "label": "Grade group 5 (Gleason Score 5 + 4 = 9)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "sys_gg5_5_5_10",
+              "label": "Grade group 5 (Gleason Score 5 + 5 = 10)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "targeted_biopsy_grade",
+          "label": "Targeted Biopsy Grade",
+          "type": "text",
+          "required": false,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "combined_systematic_targeted_grade",
+          "label": "Combined Systematic and Targeted Biopsy Grade",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "comb_cannot_be_assessed",
+              "label": "Cannot be assessed",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg1_3_3_6",
+              "label": "Grade group 1 (Gleason Score 3 + 3 = 6)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg2_3_4_7",
+              "label": "Grade group 2 (Gleason Score 3 + 4 = 7)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg3_4_3_7",
+              "label": "Grade group 3 (Gleason Score 4 + 3 = 7)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg4_4_4_8",
+              "label": "Grade group 4 (Gleason Score 4 + 4 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg4_3_5_8",
+              "label": "Grade group 4 (Gleason Score 3 + 5 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg4_5_3_8",
+              "label": "Grade group 4 (Gleason Score 5 + 3 = 8)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg5_4_5_9",
+              "label": "Grade group 5 (Gleason Score 4 + 5 = 9)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg5_5_4_9",
+              "label": "Grade group 5 (Gleason Score 5 + 4 = 9)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "comb_gg5_5_5_10",
+              "label": "Grade group 5 (Gleason Score 5 + 5 = 10)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "intraductal_carcinoma",
+          "label": "Intraductal Carcinoma (IDC)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "idc_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "idc_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "cribriform_glands",
+          "label": "Cribriform Glands (applicable to Gleason Score 7 or 8 cancer only)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "cribriform_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "cribriform_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "cribriform_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "cribriform_equivocal",
+              "label": "Equivocal (explain)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "cribriform_cannot_be_determined",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "treatment_effect",
+          "label": "Treatment Effect",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "tx_no_known_presurgical_therapy",
+              "label": "No known presurgical therapy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tx_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tx_effect_present_de_novo",
+              "label": "Treatment effect present and de novo cancer present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tx_radiation_effect",
+              "label": "Radiation therapy effect present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tx_hormonal_effect",
+              "label": "Hormonal therapy effect present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tx_other_effects",
+              "label": "Other therapy effect(s) present (specify)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tx_cannot_be_determined",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "tumor_quantitation",
+      "title": "TUMOR QUANTITATION",
+      "fields": [
+        {
+          "id": "total_number_of_cores",
+          "label": "Total Number of Cores",
+          "type": "numeric",
+          "required": true,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "total_number_of_cores_cannot_be_determined",
+          "label": "Cannot be determined",
+          "type": "text",
+          "required": true,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "number_of_positive_cores",
+          "label": "Number of Positive Cores",
+          "type": "numeric",
+          "required": true,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "number_of_positive_cores_cannot_be_determined",
+          "label": "Cannot be determined",
+          "type": "text",
+          "required": true,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "tumor_measurement_technique",
+          "label": "Tumor Measurement Technique",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "tmt_single_continuous_focus",
+              "label": "Single continuous focus",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tmt_multiple_foci_continuous",
+              "label": "Consider multiple foci as continuous tumor",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tmt_multiple_foci_discontinuous",
+              "label": "Consider multiple foci as discontinuous tumor",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "greatest_percentage_core_involvement",
+          "label": "Greatest Percentage of Core Involvement by Cancer in Any Core",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "gpc_lt_1",
+              "label": "Less than 1%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_1_5",
+              "label": "1 - 5%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_6_10",
+              "label": "6 - 10%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_11_20",
+              "label": "11 - 20%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_21_30",
+              "label": "21 - 30%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_31_40",
+              "label": "31 - 40%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_41_50",
+              "label": "41 - 50%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_51_60",
+              "label": "51 - 60%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_61_70",
+              "label": "61 - 70%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_71_80",
+              "label": "71 - 80%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_81_90",
+              "label": "81 - 90%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_gt_90",
+              "label": "Greater than 90%",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_cannot_be_determined",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "gpc_sites",
+          "label": "Specify Site(s)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "gpc_right",
+              "label": "Right",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_left",
+              "label": "Left",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_other_trus_lesion",
+              "label": "Other Transrectal Ultrasound (TRUS) lesion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_mri_guided_biopsy",
+              "label": "MRI-guided Biopsy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gpc_other_specify",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "greatest_length_core_involvement",
+          "label": "Greatest Length of Core Involvement by Cancer in Any Core in Millimeters (mm)",
+          "type": "numeric",
+          "required": false,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "greatest_length_core_sites",
+          "label": "Specify Site(s) for Greatest Length",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "gl_right",
+              "label": "Right",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gl_left",
+              "label": "Left",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gl_other_trus_lesion",
+              "label": "Other Transrectal Ultrasound (TRUS) lesion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gl_mri_guided_biopsy",
+              "label": "MRI-guided Biopsy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "gl_other_specify",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "percentage_total_prostatic_tissue_involved",
+          "label": "Percentage of Total Prostatic Tissue Involved by Tumor",
+          "type": "numeric",
+          "required": false,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "total_linear_mm_carcinoma",
+          "label": "Total Linear Millimeters (mm) of Carcinoma",
+          "type": "numeric",
+          "required": false,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "total_linear_mm_core_tissue",
+          "label": "Total Linear Millimeters (mm) of Needle Core Tissue",
+          "type": "numeric",
+          "required": false,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "periprostatic_fat_invasion",
+          "label": "Periprostatic Fat Invasion (report if identified in specimen)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "pfi_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "pfi_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "pfi_equivocal",
+              "label": "Equivocal (explain)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "pfi_cannot_be_determined",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "seminal_vesicle_invasion",
+          "label": "Seminal Vesicle Invasion (report if seminal vesicle is submitted)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "svi_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "svi_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "svi_equivocal",
+              "label": "Equivocal (explain)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "svi_cannot_be_determined",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "lymphatic_vascular_invasion",
+          "label": "Lymphatic and / or Vascular Invasion",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "lvi_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lvi_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lvi_equivocal",
+              "label": "Equivocal (explain)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lvi_cannot_be_determined",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        },
+        {
+          "id": "perineural_invasion",
+          "label": "Perineural Invasion",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "pni_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "pni_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings",
+          "label": "Additional Findings",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "af_none_identified",
+              "label": "None identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "af_aip",
+              "label": "Atypical intraductal proliferation (AIP)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "af_high_grade_pin",
+              "label": "High-grade prostatic intraepithelial neoplasia (PIN)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "af_asap",
+              "label": "Atypical small acinar proliferation / small focus of atypical glands (ASAP / ATYP)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "af_inflammation",
+              "label": "Inflammation (specify type)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "af_other_specify",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "COMMENTS",
+      "fields": [
+        {
+          "id": "comment_text",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": true,
+          "options": [],
+          "snomed": "",
+          "icd": ""
+        }
+      ]
+    }
+  ]
+}

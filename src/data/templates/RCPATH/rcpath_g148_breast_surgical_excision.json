@@ -1,0 +1,1352 @@
+{
+  "id": "rcpath_g148_breast_surgical_excision",
+  "name": "Dataset for Histopathological Reporting of Breast Disease in Surgical Excision Specimens of Breast Cancer",
+  "source": "RCPath",
+  "version": "3.0",
+  "sourceDocument": "G148",
+  "publishedDate": "2024-11-01",
+  "category": "BREAST",
+  "locale": "en-GB",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Surgical Specimen",
+      "fields": [
+        {
+          "id": "specimen_laterality",
+          "label": "Side",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "right", "label": "Right", "snomed": "", "icd": "" },
+            { "id": "left",  "label": "Left",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "specimen_type",
+          "label": "Specimen Type",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "wide_local_excision",        "label": "Wide local excision",                                    "snomed": "", "icd": "" },
+            { "id": "excision_biopsy",             "label": "Excision biopsy",                                        "snomed": "", "icd": "" },
+            { "id": "localisation_specimen",       "label": "Localisation specimen",                                  "snomed": "", "icd": "" },
+            { "id": "segmental_excision",          "label": "Segmental excision",                                     "snomed": "", "icd": "" },
+            { "id": "mastectomy",                  "label": "Mastectomy",                                             "snomed": "", "icd": "" },
+            { "id": "subcutaneous_mastectomy",     "label": "Subcutaneous mastectomy",                                "snomed": "", "icd": "" },
+            { "id": "nipple_sparing_mastectomy",   "label": "Nipple sparing mastectomy",                              "snomed": "", "icd": "" },
+            { "id": "re_excision",                 "label": "Re-excision",                                            "snomed": "", "icd": "" },
+            { "id": "further_margins",             "label": "Further margins (including cavity shaves/bed biopsies)", "snomed": "", "icd": "" },
+            { "id": "microdochectomy",             "label": "Microdochectomy / microductectomy",                      "snomed": "", "icd": "" },
+            { "id": "total_duct_excision",         "label": "Total duct excision / Hadfield procedure",               "snomed": "", "icd": "" },
+            { "id": "specimen_type_other",         "label": "Other",                                                  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "axillary_procedure",
+          "label": "Axillary Procedure",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "axillary_none",            "label": "None",                 "snomed": "", "icd": "" },
+            { "id": "sentinel_node_biopsy",     "label": "Sentinel node biopsy", "snomed": "", "icd": "" },
+            { "id": "axillary_sampling",        "label": "Axillary sampling",    "snomed": "", "icd": "" },
+            { "id": "axillary_ln_level_i",      "label": "Axillary LN level I",  "snomed": "", "icd": "" },
+            { "id": "axillary_ln_level_ii",     "label": "Axillary LN level II", "snomed": "", "icd": "" },
+            { "id": "axillary_ln_level_iii",    "label": "Axillary LN level III","snomed": "", "icd": "" },
+            { "id": "axillary_procedure_other", "label": "Other",                "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "specimen_weight_g",
+          "label": "Specimen Weight (g)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "macroscopic_description",
+          "label": "Comment / Further Macroscopic Description",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "specimen_radiograph_seen",
+          "label": "Specimen Radiograph Seen",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "radiograph_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "radiograph_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "mammographic_abnormality",
+          "label": "Mammographic Abnormality",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "mammo_yes",    "label": "Yes",    "snomed": "", "icd": "" },
+            { "id": "mammo_no",     "label": "No",     "snomed": "", "icd": "" },
+            { "id": "mammo_unsure", "label": "Unsure", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "core_biopsy_site_seen",
+          "label": "Site of Previous Core Biopsy Seen",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "core_biopsy_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "core_biopsy_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "histological_calcification",
+          "label": "Histological Calcification",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "calcification_absent",               "label": "Absent",               "snomed": "", "icd": "" },
+            { "id": "calcification_benign",               "label": "Benign",               "snomed": "", "icd": "" },
+            { "id": "calcification_malignant",            "label": "Malignant",            "snomed": "", "icd": "" },
+            { "id": "calcification_benign_and_malignant", "label": "Benign and malignant", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        }
+      ]
+    },
+    {
+      "id": "benign_lesions",
+      "title": "Benign Lesions",
+      "fields": [
+        {
+          "id": "benign_lesion_type",
+          "label": "Benign Lesion(s)",
+          "type": "checkboxes",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "columnar_cell_change",        "label": "Columnar cell change",                    "snomed": "", "icd": "" },
+            { "id": "complex_sclerosing_lesion",   "label": "Complex sclerosing lesion / radial scar", "snomed": "", "icd": "" },
+            { "id": "fibroadenoma",                "label": "Fibroadenoma",                            "snomed": "", "icd": "" },
+            { "id": "fibrocystic_change",          "label": "Fibrocystic change",                      "snomed": "", "icd": "" },
+            { "id": "multiple_papillomas",         "label": "Multiple papillomas",                     "snomed": "", "icd": "" },
+            { "id": "papilloma_single",            "label": "Papilloma (single)",                      "snomed": "", "icd": "" },
+            { "id": "periductal_mastitis",         "label": "Periductal mastitis / duct ectasia",      "snomed": "", "icd": "" },
+            { "id": "sclerosing_adenosis",         "label": "Sclerosing adenosis",                     "snomed": "", "icd": "" },
+            { "id": "solitary_cyst",               "label": "Solitary cyst",                           "snomed": "", "icd": "" },
+            { "id": "benign_lesion_other",         "label": "Other",                                   "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "epithelial_proliferation",
+          "label": "Epithelial Proliferation",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ep_not_present",            "label": "Not present",                   "snomed": "", "icd": "" },
+            { "id": "ep_present_no_atypia",      "label": "Present without atypia",        "snomed": "", "icd": "" },
+            { "id": "ep_flat_epithelial_atypia", "label": "Flat epithelial atypia",        "snomed": "", "icd": "" },
+            { "id": "ep_atypia_ductal",          "label": "Present with atypia (ductal)",  "snomed": "", "icd": "" },
+            { "id": "ep_atypia_lobular",         "label": "Present with atypia (lobular)", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "malignant_in_situ",
+      "title": "Malignant In Situ Lesion",
+      "fields": [
+        {
+          "id": "malignant_in_situ_present",
+          "label": "Malignant In Situ Lesion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "in_situ_absent",  "label": "Absent",  "snomed": "", "icd": "" },
+            { "id": "in_situ_present", "label": "Present", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "in_situ_components",
+          "label": "In Situ Components",
+          "type": "checkboxes",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "dcis", "label": "DCIS", "snomed": "", "icd": "" },
+            { "id": "lcis", "label": "LCIS", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_grade",
+          "label": "DCIS Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "dcis_grade_high",           "label": "High",           "snomed": "", "icd": "" },
+            { "id": "dcis_grade_intermediate",   "label": "Intermediate",   "snomed": "", "icd": "" },
+            { "id": "dcis_grade_low",            "label": "Low",            "snomed": "", "icd": "" },
+            { "id": "dcis_grade_not_assessable", "label": "Not assessable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_growth_pattern",
+          "label": "DCIS Growth Pattern",
+          "type": "checkboxes",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "dcis_solid",          "label": "Solid",         "snomed": "", "icd": "" },
+            { "id": "dcis_cribriform",     "label": "Cribriform",    "snomed": "", "icd": "" },
+            { "id": "dcis_papillary",      "label": "Papillary",     "snomed": "", "icd": "" },
+            { "id": "dcis_micropapillary", "label": "Micropapillary","snomed": "", "icd": "" },
+            { "id": "dcis_apocrine",       "label": "Apocrine",      "snomed": "", "icd": "" },
+            { "id": "dcis_flat",           "label": "Flat",          "snomed": "", "icd": "" },
+            { "id": "dcis_pattern_other",  "label": "Other",         "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_necrosis",
+          "label": "DCIS Necrosis",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "dcis_necrosis_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "dcis_necrosis_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_inflammation",
+          "label": "DCIS Inflammation",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "inflammation_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "inflammation_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_size_mm",
+          "label": "DCIS Size (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "pagets_disease",
+          "label": "Paget's Disease",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pagets_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "pagets_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "microinvasion",
+          "label": "Microinvasion",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "microinvasion_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "microinvasion_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "lcis_type",
+          "label": "LCIS Type",
+          "type": "checkboxes",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "lcis_classical",   "label": "Classical",   "snomed": "", "icd": "" },
+            { "id": "lcis_pleomorphic", "label": "Pleomorphic", "snomed": "", "icd": "" },
+            { "id": "lcis_florid",      "label": "Florid",      "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "lcis_size_mm",
+          "label": "LCIS Size (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Required for pleomorphic LCIS"
+        }
+      ]
+    },
+    {
+      "id": "invasive_carcinoma",
+      "title": "Invasive Carcinoma",
+      "fields": [
+        {
+          "id": "invasive_carcinoma_present",
+          "label": "Invasive Carcinoma",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "invasive_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "invasive_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "tumour_size_mm",
+          "label": "Tumour Size (mm)",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Invasive component only"
+        },
+        {
+          "id": "whole_tumour_size_mm",
+          "label": "Whole Tumour Size (mm)",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Including in situ component"
+        },
+        {
+          "id": "disease_extent",
+          "label": "Disease Extent",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "localised",              "label": "Localised",              "snomed": "", "icd": "" },
+            { "id": "multiple_invasive_foci", "label": "Multiple invasive foci", "snomed": "", "icd": "" },
+            { "id": "not_assessable",         "label": "Not assessable",         "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "invasive_tumour_type_purity",
+          "label": "Invasive Tumour Type",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pure",  "label": "Pure (single type)",          "snomed": "", "icd": "" },
+            { "id": "mixed", "label": "Mixed (multiple components)", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "invasive_tumour_type_components",
+          "label": "Invasive Tumour Type — Component(s)",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "tubular_cribriform",     "label": "Tubular / cribriform",   "snomed": "", "icd": "" },
+            { "id": "lobular",                "label": "Lobular",                "snomed": "", "icd": "" },
+            { "id": "mucinous",               "label": "Mucinous",               "snomed": "", "icd": "" },
+            { "id": "invasive_carcinoma_nst", "label": "Invasive carcinoma NST", "snomed": "", "icd": "" },
+            { "id": "micropapillary",         "label": "Micropapillary",         "snomed": "", "icd": "" },
+            { "id": "tumour_type_other",      "label": "Other",                  "snomed": "", "icd": "" }
+          ],
+          "note": "For Pure: tick 1 box. For Mixed: tick all components present."
+        },
+        {
+          "id": "histological_grade",
+          "label": "Histological Grade (Nottingham)",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "grade_1",              "label": "Grade 1",        "snomed": "", "icd": "" },
+            { "id": "grade_2",              "label": "Grade 2",        "snomed": "", "icd": "" },
+            { "id": "grade_3",              "label": "Grade 3",        "snomed": "", "icd": "" },
+            { "id": "grade_not_assessable", "label": "Not assessable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "tubule_formation_score",
+          "label": "Tubule Formation Score",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "tf_1",              "label": "1",              "snomed": "", "icd": "" },
+            { "id": "tf_2",              "label": "2",              "snomed": "", "icd": "" },
+            { "id": "tf_3",              "label": "3",              "snomed": "", "icd": "" },
+            { "id": "tf_not_assessable", "label": "Not assessable", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional) — Nottingham grading component"
+        },
+        {
+          "id": "nuclear_pleomorphism_score",
+          "label": "Nuclear Pleomorphism Score",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "np_1",              "label": "1",              "snomed": "", "icd": "" },
+            { "id": "np_2",              "label": "2",              "snomed": "", "icd": "" },
+            { "id": "np_3",              "label": "3",              "snomed": "", "icd": "" },
+            { "id": "np_not_assessable", "label": "Not assessable", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional) — Nottingham grading component"
+        },
+        {
+          "id": "mitosis_score",
+          "label": "Mitosis Score",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "mitosis_1",              "label": "1",              "snomed": "", "icd": "" },
+            { "id": "mitosis_2",              "label": "2",              "snomed": "", "icd": "" },
+            { "id": "mitosis_3",              "label": "3",              "snomed": "", "icd": "" },
+            { "id": "mitosis_not_assessable", "label": "Not assessable", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional) — Nottingham grading component"
+        },
+        {
+          "id": "lymphovascular_invasion",
+          "label": "Lymphovascular Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "lvi_present",  "label": "Present",  "snomed": "", "icd": "" },
+            { "id": "lvi_absent",   "label": "Absent",   "snomed": "", "icd": "" },
+            { "id": "lvi_possible", "label": "Possible", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "lymph_node_stage",
+      "title": "Lymph Node Stage",
+      "fields": [
+        {
+          "id": "sentinel_axillary_nodes_present",
+          "label": "Sentinel / Axillary Nodes Present",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "sentinel_nodes_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "sentinel_nodes_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "sentinel_total_present",
+          "label": "Sentinel / Axillary Nodes — Total Present",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "sentinel_total_positive",
+          "label": "Sentinel / Axillary Nodes — Total Positive",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "sentinel_total_itcs",
+          "label": "Sentinel / Axillary Nodes — Total with ITCs",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Isolated tumour cells"
+        },
+        {
+          "id": "sentinel_metastasis_size_mm",
+          "label": "Size of Metastasis (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "extracapsular_spread",
+          "label": "Extracapsular Spread",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ecs_present",        "label": "Present",       "snomed": "", "icd": "" },
+            { "id": "ecs_not_identified", "label": "Not identified", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "single_node_positive_type",
+          "label": "For Single Node Positive — Metastasis Type",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "macrometastasis", "label": "Macrometastasis", "snomed": "", "icd": "" },
+            { "id": "micrometastasis", "label": "Micrometastasis", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "other_nodes_present",
+          "label": "Other Nodes Present",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "other_nodes_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "other_nodes_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "other_nodes_site",
+          "label": "Other Nodes — Site",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "other_nodes_total_present",
+          "label": "Other Nodes — Total Present",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "other_nodes_total_positive",
+          "label": "Other Nodes — Total Positive",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "other_nodes_single_node_type",
+          "label": "Other Nodes — Single Node Positive Type",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "other_macro", "label": "Macrometastasis", "snomed": "", "icd": "" },
+            { "id": "other_micro", "label": "Micrometastasis", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "perinodal_fat_status",
+          "label": "Status of Perinodal Fat",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "perinodal_involved",     "label": "Involved",     "snomed": "", "icd": "" },
+            { "id": "perinodal_not_involved", "label": "Not involved", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "summary_lymph_node_stage",
+          "label": "Summary Lymph Node Stage",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ln_stage_1", "label": "1 — Node negative",            "snomed": "", "icd": "" },
+            { "id": "ln_stage_2", "label": "2 — 1–3 nodes positive",       "snomed": "", "icd": "" },
+            { "id": "ln_stage_3", "label": "3 — 4 or more nodes positive",  "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        }
+      ]
+    },
+    {
+      "id": "post_neoadjuvant_therapy",
+      "title": "Post-Neoadjuvant Therapy (where applicable)",
+      "fields": [
+        {
+          "id": "post_nat_axillary_total_present",
+          "label": "Post-NAT Axillary Nodes — Total Present",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Complete only for post-neoadjuvant therapy cases"
+        },
+        {
+          "id": "post_nat_axillary_total_positive",
+          "label": "Post-NAT Axillary Nodes — Total Positive",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "post_nat_axillary_response_no_tumour",
+          "label": "Post-NAT Axillary Nodes — Showing Treatment Response but No Tumour Cells",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "post_nat_other_nodes_site",
+          "label": "Post-NAT Other Nodes — Site",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "post_nat_other_nodes_total_present",
+          "label": "Post-NAT Other Nodes — Total Present",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "post_nat_other_nodes_total_positive",
+          "label": "Post-NAT Other Nodes — Total Positive",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "post_nat_other_nodes_response_no_tumour",
+          "label": "Post-NAT Other Nodes — Showing Treatment Response but No Tumour Cells",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "treatment_response_in_metastases",
+          "label": "Evidence of Treatment Response in the Metastases",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "met_response_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "met_response_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "chemo_response_breast",
+          "label": "Final Classification of Chemotherapy Response — Breast Disease",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "e.g. pCR, near-pCR, partial response, no response"
+        },
+        {
+          "id": "chemo_response_lymph_node",
+          "label": "Final Classification of Chemotherapy Response — Lymph Node",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tnm_stage",
+      "title": "TNM Stage",
+      "fields": [
+        {
+          "id": "t_stage",
+          "label": "T Stage",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pTis",            "label": "pTis",               "snomed": "", "icd": "" },
+            { "id": "pT1mi",           "label": "pT1mi",              "snomed": "", "icd": "" },
+            { "id": "pT1a",            "label": "pT1a",               "snomed": "", "icd": "" },
+            { "id": "pT1b",            "label": "pT1b",               "snomed": "", "icd": "" },
+            { "id": "pT1c",            "label": "pT1c",               "snomed": "", "icd": "" },
+            { "id": "pT2",             "label": "pT2",                "snomed": "", "icd": "" },
+            { "id": "pT3",             "label": "pT3",                "snomed": "", "icd": "" },
+            { "id": "pT4a",            "label": "pT4a",               "snomed": "", "icd": "" },
+            { "id": "pT4b",            "label": "pT4b",               "snomed": "", "icd": "" },
+            { "id": "pT4c",            "label": "pT4c",               "snomed": "", "icd": "" },
+            { "id": "pT4d",            "label": "pT4d",               "snomed": "", "icd": "" },
+            { "id": "t_cannot_assess", "label": "Cannot be assessed", "snomed": "", "icd": "" }
+          ],
+          "note": "Add suffix 'y' for post-neoadjuvant therapy cases"
+        },
+        {
+          "id": "n_stage",
+          "label": "N Stage",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pN0",             "label": "pN0",                "snomed": "", "icd": "" },
+            { "id": "pN1mi",           "label": "pN1mi",              "snomed": "", "icd": "" },
+            { "id": "pN1a",            "label": "pN1a",               "snomed": "", "icd": "" },
+            { "id": "pN1b",            "label": "pN1b",               "snomed": "", "icd": "" },
+            { "id": "pN1c",            "label": "pN1c",               "snomed": "", "icd": "" },
+            { "id": "pN2a",            "label": "pN2a",               "snomed": "", "icd": "" },
+            { "id": "pN2b",            "label": "pN2b",               "snomed": "", "icd": "" },
+            { "id": "pN3a",            "label": "pN3a",               "snomed": "", "icd": "" },
+            { "id": "pN3c",            "label": "pN3c",               "snomed": "", "icd": "" },
+            { "id": "n_cannot_assess", "label": "Cannot be assessed", "snomed": "", "icd": "" }
+          ],
+          "note": "Add suffix 'y' for post-neoadjuvant therapy cases"
+        },
+        {
+          "id": "m_stage",
+          "label": "M Stage",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pM1",             "label": "pM1",                "snomed": "", "icd": "" },
+            { "id": "m_cannot_assess", "label": "Cannot be assessed", "snomed": "", "icd": "" }
+          ],
+          "note": "Record only if M1 or relevant"
+        }
+      ]
+    },
+    {
+      "id": "excision_margins",
+      "title": "Excision Status / Margins",
+      "fields": [
+        {
+          "id": "invasive_margin_superior_mm",
+          "label": "Invasive — Superior Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "invasive_margin_inferior_mm",
+          "label": "Invasive — Inferior Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "invasive_margin_medial_mm",
+          "label": "Invasive — Medial Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "invasive_margin_lateral_mm",
+          "label": "Invasive — Lateral Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "invasive_margin_deep_mm",
+          "label": "Invasive — Deep Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "invasive_margin_superficial_mm",
+          "label": "Invasive — Superficial Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "invasive_margin_nipple_mm",
+          "label": "Invasive — Nipple Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_superior_mm",
+          "label": "In Situ (DCIS / pleomorphic LCIS) — Superior Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_inferior_mm",
+          "label": "In Situ — Inferior Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_medial_mm",
+          "label": "In Situ — Medial Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_lateral_mm",
+          "label": "In Situ — Lateral Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_deep_mm",
+          "label": "In Situ — Deep Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_superficial_mm",
+          "label": "In Situ — Superficial Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "insitu_margin_nipple_mm",
+          "label": "In Situ — Nipple Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "receptor_status",
+      "title": "Receptor Status",
+      "fields": [
+        {
+          "id": "er_status",
+          "label": "Oestrogen Receptor (ER) Status",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "er_positive",     "label": "Positive (≥1%)",       "snomed": "", "icd": "" },
+            { "id": "er_low_positive", "label": "Low positive (1–10%)", "snomed": "", "icd": "" },
+            { "id": "er_negative",     "label": "Negative (<1%)",       "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "er_percent_positive",
+          "label": "ER — % Positive Tumour Cells",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "er_staining_intensity",
+          "label": "ER — Average Intensity of Staining",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "er_weak",     "label": "Weak",     "snomed": "", "icd": "" },
+            { "id": "er_moderate", "label": "Moderate", "snomed": "", "icd": "" },
+            { "id": "er_strong",   "label": "Strong",   "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "er_allred_score",
+          "label": "ER — Allred Score (0–8)",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "er_h_score",
+          "label": "ER — H Score (0–300)",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "er_on_slide_control",
+          "label": "ER — On-Slide Positive Control Material",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "er_control_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "er_control_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "pr_status",
+          "label": "Progesterone Receptor (PR) Status",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pr_positive", "label": "Positive (≥1%)", "snomed": "", "icd": "" },
+            { "id": "pr_negative", "label": "Negative (<1%)", "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "pr_percent_positive",
+          "label": "PR — % Positive Tumour Cells",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "pr_staining_intensity",
+          "label": "PR — Average Intensity of Staining",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pr_weak",     "label": "Weak",     "snomed": "", "icd": "" },
+            { "id": "pr_moderate", "label": "Moderate", "snomed": "", "icd": "" },
+            { "id": "pr_strong",   "label": "Strong",   "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "pr_allred_score",
+          "label": "PR — Allred Score (0–8)",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "pr_h_score",
+          "label": "PR — H Score (0–300)",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "pr_on_slide_control",
+          "label": "PR — On-Slide Positive Control Material",
+          "type": "dropdown",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pr_control_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "pr_control_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "her2_ihc_score",
+          "label": "HER2 IHC Score",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "her2_0", "label": "0 — Negative",   "snomed": "", "icd": "" },
+            { "id": "her2_1", "label": "1+ — Negative",  "snomed": "", "icd": "" },
+            { "id": "her2_2", "label": "2+ — Equivocal", "snomed": "", "icd": "" },
+            { "id": "her2_3", "label": "3+ — Positive",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "her2_ish_ratio",
+          "label": "HER2 ISH Ratio",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "her2_ish_status",
+          "label": "HER2 ISH Status",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "her2_ish_amplified",    "label": "Amplified",     "snomed": "", "icd": "" },
+            { "id": "her2_ish_non_amplified", "label": "Non-amplified", "snomed": "", "icd": "" },
+            { "id": "her2_ish_borderline",   "label": "Borderline",    "snomed": "", "icd": "" },
+            { "id": "her2_ish_not_performed","label": "Not performed",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "her2_copy_number",
+          "label": "HER2 Copy Number",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "chromosome_17_copy_number",
+          "label": "Chromosome 17 Copy Number",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        },
+        {
+          "id": "her2_final_status",
+          "label": "Final HER2 Status",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "her2_positive", "label": "Positive", "snomed": "", "icd": "" },
+            { "id": "her2_negative", "label": "Negative", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "ki67_proliferation_index",
+          "label": "Proliferation (Ki67) Index (%)",
+          "type": "text",
+          "required": false,
+          "core": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Non-core (optional)"
+        }
+      ]
+    },
+    {
+      "id": "snomed_codes",
+      "title": "SNOMED Codes",
+      "fields": [
+        {
+          "id": "snomed_t_code",
+          "label": "SNOMED T Code (Topography)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "snomed_m_code",
+          "label": "SNOMED M Code (Morphology)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

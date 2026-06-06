@@ -1,0 +1,181 @@
+{
+  "id": "kidney_biopsy",
+  "name": "CAP Kidney — Renal Cell Carcinoma Biopsy",
+  "source": "CAP",
+  "version": "4.2.0.0",
+  "category": "KIDNEY",
+  "standard": "AJCC 8th Edition",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "needle_biopsy", "label": "Needle biopsy", "snomed": "", "icd": "" },
+            { "id": "incisional_biopsy", "label": "Incisional biopsy", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "right", "label": "Right", "snomed": "", "icd": "" },
+            { "id": "left", "label": "Left", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "tumor_site",
+          "label": "Tumor Site (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "upper_pole", "label": "Upper pole", "snomed": "", "icd": "" },
+            { "id": "middle", "label": "Middle", "snomed": "", "icd": "" },
+            { "id": "lower_pole", "label": "Lower pole", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_known", "label": "Not known", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "clear_cell_rcc", "label": "Clear cell renal cell carcinoma", "snomed": "41607009", "icd": "" },
+            { "id": "multilocular_cystic", "label": "Multilocular cystic renal neoplasm of low malignant potential", "snomed": "", "icd": "" },
+            { "id": "papillary_rcc", "label": "Papillary renal cell carcinoma", "snomed": "57054005", "icd": "" },
+            { "id": "chromophobe_rcc", "label": "Chromophobe renal cell carcinoma", "snomed": "128625008", "icd": "" },
+            { "id": "other_oncocytic", "label": "Other oncocytic tumors of the kidney (specify)", "snomed": "", "icd": "" },
+            { "id": "collecting_duct", "label": "Collecting duct carcinoma", "snomed": "413448000", "icd": "" },
+            { "id": "clear_cell_papillary", "label": "Clear cell papillary renal cell tumor", "snomed": "", "icd": "" },
+            { "id": "mucinous_tubular", "label": "Mucinous tubular and spindle renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "tubulocystic", "label": "Tubulocystic renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "acquired_cystic", "label": "Acquired cystic disease-associated renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "eosinophilic_solid_cystic", "label": "Eosinophilic solid and cystic renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "rcc_nos", "label": "Renal cell carcinoma, NOS (unclassified)", "snomed": "", "icd": "" },
+            { "id": "tfe3_rearranged", "label": "TFE3-rearranged renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "tfeb_altered", "label": "TFEB-altered renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "eloc_mutated", "label": "ELOC (formerly TCEB1)-mutated renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "fh_deficient", "label": "Fumarate hydratase-deficient renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "sdh_deficient", "label": "Succinate dehydrogenase-deficient (SDH) renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "alk_rearranged", "label": "ALK-rearranged renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "smarcb1_deficient", "label": "SMARCB1-deficient renal medullary carcinoma", "snomed": "", "icd": "" },
+            { "id": "subtype_pending", "label": "Renal cell carcinoma, subtype pending additional studies", "snomed": "", "icd": "" },
+            { "id": "other_not_listed", "label": "Other histologic type not listed (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "histologic_grade",
+          "label": "Histologic Grade (WHO/ISUP)",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "g1", "label": "G1 — nucleoli absent or inconspicuous at 400x", "snomed": "", "icd": "" },
+            { "id": "g2", "label": "G2 — nucleoli conspicuous at 400x, not prominent at 100x", "snomed": "", "icd": "" },
+            { "id": "g3", "label": "G3 — nucleoli conspicuous at 100x", "snomed": "", "icd": "" },
+            { "id": "g4", "label": "G4 — extreme nuclear pleomorphism and/or multinucleated giant cells and/or rhabdoid and/or sarcomatoid differentiation (specify)", "snomed": "", "icd": "" },
+            { "id": "gx", "label": "GX — cannot be assessed", "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "histologic_features",
+          "label": "Histologic Features (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "no_sarcomatoid_rhabdoid", "label": "Sarcomatoid or rhabdoid features not identified", "snomed": "", "icd": "" },
+            { "id": "sarcomatoid", "label": "Sarcomatoid features present", "snomed": "", "icd": "" },
+            { "id": "rhabdoid", "label": "Rhabdoid features present", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "necrosis",
+          "label": "Necrosis",
+          "type": "dropdown",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_identified", "label": "Not identified", "snomed": "", "icd": "" },
+            { "id": "present", "label": "Present", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "lymphatic_vascular_invasion",
+          "label": "Lymphatic and/or Vascular Invasion",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_identified", "label": "Not identified", "snomed": "", "icd": "" },
+            { "id": "present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (specify)", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings",
+          "label": "Additional Findings (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "none", "label": "None identified", "snomed": "", "icd": "" },
+            { "id": "other_pathology", "label": "Other pathology present (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "comments",
+          "label": "Comments",
+          "type": "longtext",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": []
+        }
+      ]
+    }
+  ]
+}

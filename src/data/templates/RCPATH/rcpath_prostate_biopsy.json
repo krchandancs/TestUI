@@ -1,0 +1,644 @@
+{
+  "id": "rcpath_prostate_biopsy",
+  "name": "Reporting Proforma for Prostatic Biopsies",
+  "source": "RCPath",
+  "version": "current",
+  "sourceDocument": "Appendix D",
+  "category": "PROSTATE",
+  "locale": "en-GB",
+  "sections": [
+    {
+      "id": "clinical_information",
+      "title": "Clinical Information",
+      "fields": [
+        {
+          "id": "pre_biopsy_psa",
+          "label": "Pre-biopsy PSA (ng/mL)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Numerical value in ng/mL"
+        },
+        {
+          "id": "pre_biopsy_psa_availability",
+          "label": "Pre-biopsy PSA Availability",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "psa_not_available",  "label": "Not available",  "snomed": "", "icd": "" },
+            { "id": "psa_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "Only applicable if no value given for Pre-biopsy PSA"
+        },
+        {
+          "id": "pre_biopsy_mri",
+          "label": "Pre-biopsy MRI Findings",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Include PIRADS score and lesion location(s)"
+        }
+      ]
+    },
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "specimen_type",
+          "label": "Type of Specimen",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "trus_biopsy",    "label": "TRUS biopsy",    "snomed": "", "icd": "" },
+            { "id": "transperineal",  "label": "Transperineal",  "snomed": "", "icd": "" },
+            { "id": "targeted",       "label": "Targeted",       "snomed": "", "icd": "" },
+            { "id": "specimen_other", "label": "Other",          "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "specimen_type_other_specify",
+          "label": "Type of Specimen — Other (specify)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if 'Other' selected"
+        }
+      ]
+    },
+    {
+      "id": "cores_systematic_right",
+      "title": "Systematic Cores — Right Side",
+      "fields": [
+        {
+          "id": "systematic_right_location",
+          "label": "Systematic Right Side — Location(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Repeating data item (e.g. right anterior, right mid, right posterior)"
+        },
+        {
+          "id": "systematic_right_number_taken",
+          "label": "Systematic Right Side — Number of Cores Taken",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "systematic_right_number_received",
+          "label": "Systematic Right Side — Number of Cores Received",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "total_right_cores",
+          "label": "Total Number of Right Cores",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "May be calculated from number received"
+        },
+        {
+          "id": "right_cores_involved",
+          "label": "Number of Right Cores Involved",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if total cores >0"
+        },
+        {
+          "id": "location_involved_right_cores",
+          "label": "Location of Involved Right Cores",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "cores_systematic_left",
+      "title": "Systematic Cores — Left Side",
+      "fields": [
+        {
+          "id": "systematic_left_location",
+          "label": "Systematic Left Side — Location(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Repeating data item (e.g. left anterior, left mid, left posterior)"
+        },
+        {
+          "id": "systematic_left_number_taken",
+          "label": "Systematic Left Side — Number of Cores Taken",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "systematic_left_number_received",
+          "label": "Systematic Left Side — Number of Cores Received",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "total_left_cores",
+          "label": "Total Number of Left Cores",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "May be calculated from number received"
+        },
+        {
+          "id": "left_cores_involved",
+          "label": "Number of Left Cores Involved",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if total cores >0"
+        },
+        {
+          "id": "location_involved_left_cores",
+          "label": "Location of Involved Left Cores",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "cores_targeted",
+      "title": "Targeted Cores",
+      "fields": [
+        {
+          "id": "target_location",
+          "label": "Target — Location",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Repeating data item; specify PIRADS lesion location"
+        },
+        {
+          "id": "target_number_taken",
+          "label": "Target — Number of Cores Taken",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "target_number_received",
+          "label": "Target — Number of Cores Received",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "total_targeted_cores",
+          "label": "Total Number of Targeted Cores",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "May be calculated from sum of targeted cores"
+        },
+        {
+          "id": "total_targeted_cores_involved",
+          "label": "Total Number of Targeted Cores Involved",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "core_totals",
+      "title": "Core Totals",
+      "fields": [
+        {
+          "id": "total_systematic_cores",
+          "label": "Total Number of Systematic Cores",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Sum of left + right cores"
+        },
+        {
+          "id": "total_systematic_cores_involved",
+          "label": "Total Number of Systematic Cores Involved",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Sum of left + right cores involved"
+        },
+        {
+          "id": "total_other_cores",
+          "label": "Total Number of Other Cores",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "total_other_cores_involved",
+          "label": "Number of Other Cores Involved",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if total other cores >0"
+        },
+        {
+          "id": "location_involved_other_cores",
+          "label": "Location of Involved Other Cores",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tumour_pathology",
+      "title": "Tumour Pathology",
+      "fields": [
+        {
+          "id": "histological_tumour_type",
+          "label": "Histological Tumour Type",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "acinar_adenocarcinoma",           "label": "Acinar adenocarcinoma",                    "snomed": "", "icd": "" },
+            { "id": "prostatic_ductal_adenocarcinoma",  "label": "Prostatic ductal adenocarcinoma",           "snomed": "", "icd": "" },
+            { "id": "small_cell_neuroendocrine",        "label": "Small cell neuroendocrine carcinoma",       "snomed": "", "icd": "" },
+            { "id": "tumour_type_other",                "label": "Other",                                     "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "histological_tumour_type_other_specify",
+          "label": "Histological Tumour Type — Other (specify)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if 'Other' selected"
+        },
+        {
+          "id": "longest_cancer_core_mm",
+          "label": "Longest Length of Cancer in 1 Core (mm)",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "location_longest_cancer_core",
+          "label": "Location of Longest Length of Cancer in 1 Core",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "perineural_invasion",
+          "label": "Perineural Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "pUR15240",
+          "icd": "",
+          "options": [
+            { "id": "pni_not_identified", "label": "Not identified", "snomed": "N", "icd": "" },
+            { "id": "pni_present",        "label": "Present",        "snomed": "Y", "icd": "" }
+          ],
+          "note": "COSD: pUR15240"
+        },
+        {
+          "id": "extraprostatic_extension",
+          "label": "Extraprostatic Extension",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "epe_not_identified", "label": "Not identified", "snomed": "", "icd": "" },
+            { "id": "epe_present",        "label": "Present",        "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "grading",
+      "title": "Gleason Score and Grade Group",
+      "fields": [
+        {
+          "id": "gleason_applicable",
+          "label": "Gleason Score Applicable",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gleason_applicable",     "label": "Applicable",     "snomed": "", "icd": "" },
+            { "id": "gleason_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "primary_gleason_grade",
+          "label": "Primary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15210",
+          "icd": "",
+          "options": [
+            { "id": "primary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "primary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "primary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "primary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15210"
+        },
+        {
+          "id": "secondary_gleason_grade",
+          "label": "Secondary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15220",
+          "icd": "",
+          "options": [
+            { "id": "secondary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "secondary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "secondary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "secondary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15220"
+        },
+        {
+          "id": "gleason_score_total",
+          "label": "Gleason Score — Total",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gleason_6",              "label": "6",              "snomed": "", "icd": "" },
+            { "id": "gleason_7",              "label": "7",              "snomed": "", "icd": "" },
+            { "id": "gleason_8",              "label": "8",              "snomed": "", "icd": "" },
+            { "id": "gleason_9",              "label": "9",              "snomed": "", "icd": "" },
+            { "id": "gleason_10",             "label": "10",             "snomed": "", "icd": "" },
+            { "id": "gleason_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "grade_group",
+          "label": "Grade Group",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gg_1",              "label": "1",              "snomed": "", "icd": "" },
+            { "id": "gg_2",              "label": "2",              "snomed": "", "icd": "" },
+            { "id": "gg_3",              "label": "3",              "snomed": "", "icd": "" },
+            { "id": "gg_4",              "label": "4",              "snomed": "", "icd": "" },
+            { "id": "gg_5",              "label": "5",              "snomed": "", "icd": "" },
+            { "id": "gg_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "percentage_gleason_pattern_4",
+          "label": "Percentage Gleason Pattern 4",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pattern4_lt5",          "label": "<5%",           "snomed": "", "icd": "" },
+            { "id": "pattern4_5_lt10",       "label": "5–<10%",        "snomed": "", "icd": "" },
+            { "id": "pattern4_10_lt20",      "label": "10–<20%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_20_lt30",      "label": "20–<30%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_30_lt40",      "label": "30–<40%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_40_lt50",      "label": "40–<50%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_50_lt60",      "label": "50–<60%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_60_lt70",      "label": "60–<70%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_70_lt80",      "label": "70–<80%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_80_lt90",      "label": "80–<90%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_90_100",       "label": "90–100%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_not_applicable","label": "Not applicable","snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "invasive_cribriform_intraductal",
+          "label": "Invasive Cribriform and/or Intraductal Carcinoma",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "cribriform_not_present", "label": "Not present", "snomed": "", "icd": "" },
+            { "id": "cribriform_present",     "label": "Present",     "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "molecular_block",
+      "title": "Representative Block for Molecular Studies",
+      "fields": [
+        {
+          "id": "representative_molecular_block",
+          "label": "Representative Block for Molecular Studies",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Block identifier"
+        },
+        {
+          "id": "molecular_block_tumour_content",
+          "label": "Tumour Content of Molecular Block",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "content_0_20",         "label": "0–20%",          "snomed": "", "icd": "" },
+            { "id": "content_20_30",        "label": "20–30%",         "snomed": "", "icd": "" },
+            { "id": "content_31_40",        "label": "31–40%",         "snomed": "", "icd": "" },
+            { "id": "content_41_50",        "label": "41–50%",         "snomed": "", "icd": "" },
+            { "id": "content_51_60",        "label": "51–60%",         "snomed": "", "icd": "" },
+            { "id": "content_61_70",        "label": "61–70%",         "snomed": "", "icd": "" },
+            { "id": "content_71_80",        "label": "71–80%",         "snomed": "", "icd": "" },
+            { "id": "content_91_100",       "label": "91–100%",        "snomed": "", "icd": "" },
+            { "id": "content_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "snomed_codes",
+      "title": "SNOMED Codes",
+      "fields": [
+        {
+          "id": "snomed_t_code",
+          "label": "SNOMED Topography Code",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "pCR6410",
+          "icd": "",
+          "options": [],
+          "note": "May have multiple codes. COSD: pCR6410"
+        },
+        {
+          "id": "snomed_m_code",
+          "label": "SNOMED Morphology Code",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "pCR6420",
+          "icd": "",
+          "options": [],
+          "note": "May have multiple codes. COSD: pCR6420"
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

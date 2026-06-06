@@ -1,0 +1,129 @@
+{
+  "id": "wilms_biopsy",
+  "name": "CAP Kidney — Wilms & Pediatric Renal Tumors Biopsy",
+  "source": "CAP",
+  "version": "5.0.0.1",
+  "category": "KIDNEY",
+  "standard": "COG / SIOP",
+  "sections": [
+    {
+      "id": "expert_consultation",
+      "title": "Expert Consultation",
+      "fields": [
+        {
+          "id": "expert_consultation",
+          "label": "Expert Consultation",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "pending",        "label": "Pending — protocol completion awaiting expert consultation",                     "snomed": "", "icd": "" },
+            { "id": "completed",      "label": "Completed — protocol or elements performed following expert consultation",       "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable",                                                                 "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "core_biopsy",      "label": "Core biopsy",        "snomed": "", "icd": "" },
+            { "id": "incisional_biopsy","label": "Incisional biopsy",  "snomed": "", "icd": "" },
+            { "id": "other",            "label": "Other (specify)",    "snomed": "", "icd": "" },
+            { "id": "not_specified",    "label": "Not specified",      "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "right",         "label": "Right",         "snomed": "", "icd": "" },
+            { "id": "left",          "label": "Left",          "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "wilms_favorable",        "label": "Wilms tumor, favorable histology",                              "snomed": "302849000", "icd": "" },
+            { "id": "wilms_diffuse_anaplasia","label": "Wilms tumor, diffuse anaplasia",                                "snomed": "",           "icd": "" },
+            { "id": "cmn",                    "label": "Congenital mesoblastic nephroma (cellular, classic, or mixed)", "snomed": "404037005", "icd": "" },
+            { "id": "ccsk",                   "label": "Clear cell sarcoma of kidney",                                  "snomed": "413448000", "icd": "" },
+            { "id": "rhabdoid",               "label": "Rhabdoid tumor",                                               "snomed": "404039008", "icd": "" },
+            { "id": "other",                  "label": "Other (specify)",                                              "snomed": "",           "icd": "" },
+            { "id": "cannot_determine",       "label": "Malignant neoplasm, type cannot be determined (explain)",      "snomed": "",           "icd": "" }
+          ]
+        },
+        {
+          "id": "ihc",
+          "label": "Relevant Immunohistochemistry",
+          "type": "dropdown",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_performed",    "label": "Not performed",    "snomed": "", "icd": "" },
+            { "id": "specify_findings", "label": "Specify findings", "snomed": "", "icd": "" },
+            { "id": "pending",          "label": "Pending",          "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "ancillary_studies",
+          "label": "Ancillary Studies (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "microarray", "label": "Microarray (specify findings / pending)",                "snomed": "", "icd": "" },
+            { "id": "fish",       "label": "FISH (specify probe and findings / pending)",            "snomed": "", "icd": "" },
+            { "id": "ngs",        "label": "Next generation sequencing / NGS (specify / pending)",  "snomed": "", "icd": "" },
+            { "id": "other",      "label": "Other (specify)",                                        "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings",
+          "label": "Additional Findings (specify)",
+          "type": "longtext",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "", "icd": "", "options": []
+        },
+        {
+          "id": "comments",
+          "label": "Comments",
+          "type": "longtext",
+          "required": false,
+          "snomed": "", "icd": "", "options": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "id": "kidney_resection",
+  "name": "CAP Kidney — Renal Cell Carcinoma Resection",
+  "source": "CAP",
+  "version": "4.2.1.0",
+  "category": "KIDNEY",
+  "standard": "AJCC 8th Edition",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "partial_nephrectomy", "label": "Partial nephrectomy", "snomed": "", "icd": "" },
+            { "id": "total_nephrectomy", "label": "Total (simple) nephrectomy", "snomed": "", "icd": "" },
+            { "id": "radical_nephrectomy", "label": "Radical nephrectomy", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "right", "label": "Right", "snomed": "", "icd": "" },
+            { "id": "left", "label": "Left", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "tumor_focality",
+          "label": "Tumor Focality",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "unifocal", "label": "Unifocal", "snomed": "", "icd": "" },
+            { "id": "multifocal", "label": "Multifocal (specify number of tumors)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "tumor_site",
+          "label": "Tumor Site (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "upper_pole", "label": "Upper pole", "snomed": "", "icd": "" },
+            { "id": "middle", "label": "Middle", "snomed": "", "icd": "" },
+            { "id": "lower_pole", "label": "Lower pole", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "tumor_size_cm",
+          "label": "Tumor Size — Greatest Dimension (cm)",
+          "type": "numeric",
+          "required": true,
+          "note": "If multiple tumors, document size of largest",
+          "snomed": "",
+          "icd": "",
+          "options": []
+        },
+        {
+          "id": "tumor_size_cannot_determine",
+          "label": "Tumor Size Cannot Be Determined",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": []
+        },
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "clear_cell_rcc", "label": "Clear cell renal cell carcinoma", "snomed": "41607009", "icd": "" },
+            { "id": "multilocular_cystic", "label": "Multilocular cystic renal neoplasm of low malignant potential", "snomed": "", "icd": "" },
+            { "id": "papillary_rcc", "label": "Papillary renal cell carcinoma", "snomed": "57054005", "icd": "" },
+            { "id": "chromophobe_rcc", "label": "Chromophobe renal cell carcinoma", "snomed": "128625008", "icd": "" },
+            { "id": "other_oncocytic", "label": "Other oncocytic tumors of the kidney (specify)", "snomed": "", "icd": "" },
+            { "id": "collecting_duct", "label": "Collecting duct carcinoma", "snomed": "413448000", "icd": "" },
+            { "id": "clear_cell_papillary", "label": "Clear cell papillary renal cell tumor", "snomed": "", "icd": "" },
+            { "id": "mucinous_tubular", "label": "Mucinous tubular and spindle renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "tubulocystic", "label": "Tubulocystic renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "acquired_cystic", "label": "Acquired cystic disease-associated renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "eosinophilic_solid_cystic", "label": "Eosinophilic solid and cystic renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "rcc_nos", "label": "Renal cell carcinoma, NOS (unclassified)", "snomed": "", "icd": "" },
+            { "id": "tfe3_rearranged", "label": "TFE3-rearranged renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "tfeb_altered", "label": "TFEB-altered renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "eloc_mutated", "label": "ELOC (formerly TCEB1)-mutated renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "fh_deficient", "label": "Fumarate hydratase-deficient renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "sdh_deficient", "label": "Succinate dehydrogenase-deficient (SDH) renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "alk_rearranged", "label": "ALK-rearranged renal cell carcinoma", "snomed": "", "icd": "" },
+            { "id": "smarcb1_deficient", "label": "SMARCB1-deficient renal medullary carcinoma", "snomed": "", "icd": "" },
+            { "id": "subtype_pending", "label": "Renal cell carcinoma, subtype pending additional studies", "snomed": "", "icd": "" },
+            { "id": "other_not_listed", "label": "Other histologic type not listed (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "histologic_grade",
+          "label": "Histologic Grade (WHO/ISUP)",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "g1", "label": "G1 — nucleoli absent or inconspicuous at 400x", "snomed": "", "icd": "" },
+            { "id": "g2", "label": "G2 — nucleoli conspicuous at 400x, not prominent at 100x", "snomed": "", "icd": "" },
+            { "id": "g3", "label": "G3 — nucleoli conspicuous at 100x", "snomed": "", "icd": "" },
+            { "id": "g4", "label": "G4 — extreme nuclear pleomorphism and/or multinucleated giant cells and/or rhabdoid and/or sarcomatoid differentiation (specify)", "snomed": "", "icd": "" },
+            { "id": "gx", "label": "GX — cannot be assessed", "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "tumor_extent",
+          "label": "Tumor Extent (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "limited_to_kidney", "label": "Limited to kidney", "snomed": "", "icd": "" },
+            { "id": "perinephric_tissue", "label": "Extends into perinephric tissue (beyond renal capsule)", "snomed": "", "icd": "" },
+            { "id": "renal_sinus", "label": "Extends into renal sinus", "snomed": "", "icd": "" },
+            { "id": "pelvicalyceal", "label": "Extends into pelvicalyceal system", "snomed": "", "icd": "" },
+            { "id": "renal_vein", "label": "Extends into renal vein or its segmental branches", "snomed": "", "icd": "" },
+            { "id": "ivc", "label": "Extends into inferior vena cava", "snomed": "", "icd": "" },
+            { "id": "gerota_fascia", "label": "Extends beyond Gerota's fascia", "snomed": "", "icd": "" },
+            { "id": "adrenal_direct", "label": "Directly invades adrenal gland (T4)", "snomed": "", "icd": "" },
+            { "id": "adrenal_noncontiguous", "label": "Involves adrenal gland non-contiguously (M1)", "snomed": "", "icd": "" },
+            { "id": "other_organs", "label": "Extends into other organ(s)/structure(s) (specify)", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "histologic_features",
+          "label": "Histologic Features (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "no_sarcomatoid_rhabdoid", "label": "Sarcomatoid or rhabdoid features not identified", "snomed": "", "icd": "" },
+            { "id": "sarcomatoid", "label": "Sarcomatoid features present", "snomed": "", "icd": "" },
+            { "id": "rhabdoid", "label": "Rhabdoid features present", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "tumor_necrosis",
+          "label": "Tumor Necrosis",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_identified", "label": "Not identified", "snomed": "", "icd": "" },
+            { "id": "present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "lymphatic_vascular_invasion",
+          "label": "Lymphatic and/or Small Vessel Vascular Invasion (excluding renal vein and its segmental branches and inferior vena cava)",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_identified", "label": "Not identified", "snomed": "", "icd": "" },
+            { "id": "present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (specify)", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status",
+          "label": "Margin Status",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "all_negative", "label": "All margins negative for invasive carcinoma", "snomed": "", "icd": "" },
+            { "id": "invasive_present", "label": "Invasive carcinoma present at margin", "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "margins_involved",
+          "label": "Margin(s) Involved by Invasive Carcinoma (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "# For partial nephrectomy only",
+          "snomed": "",
+          "icd": "",
+          "visibleWhen": { "fieldId": "margin_status", "answerId": "invasive_present" },
+          "options": [
+            { "id": "renal_parenchymal", "label": "Renal parenchymal # (specify)", "snomed": "", "icd": "" },
+            { "id": "renal_capsular", "label": "Renal capsular # (specify)", "snomed": "", "icd": "" },
+            { "id": "renal_sinus_soft_tissue", "label": "Renal sinus soft tissue # (specify)", "snomed": "", "icd": "" },
+            { "id": "renal_hilar_soft_tissue", "label": "Renal hilar soft tissue (specify)", "snomed": "", "icd": "" },
+            { "id": "renal_vein", "label": "Renal vein (tumor invades or is adherent to vein wall at margin) (specify)", "snomed": "", "icd": "" },
+            { "id": "ureteral", "label": "Ureteral (specify)", "snomed": "", "icd": "" },
+            { "id": "perinephric_fat", "label": "Perinephric fat (specify)", "snomed": "", "icd": "" },
+            { "id": "gerota_fascia", "label": "Gerota's fascia (specify)", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined (explain)", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regional_lymph_nodes",
+      "title": "Regional Lymph Nodes",
+      "fields": [
+        {
+          "id": "lymph_node_status",
+          "label": "Regional Lymph Node Status",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable (no regional lymph nodes submitted or found)", "snomed": "", "icd": "" },
+            { "id": "all_negative", "label": "All regional lymph nodes negative for tumor", "snomed": "", "icd": "" },
+            { "id": "tumor_present", "label": "Tumor present in regional lymph node(s)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "ln_number_positive",
+          "label": "Number of Lymph Nodes with Tumor",
+          "type": "numeric",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "visibleWhen": { "fieldId": "lymph_node_status", "answerId": "tumor_present" }
+        },
+        {
+          "id": "ln_number_examined",
+          "label": "Number of Lymph Nodes Examined",
+          "type": "numeric",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "distant_metastasis",
+      "title": "Distant Metastasis",
+      "fields": [
+        {
+          "id": "distant_metastasis",
+          "label": "Distant Site(s) Involved, if applicable",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable", "snomed": "", "icd": "" },
+            { "id": "specify", "label": "Specify site(s)", "snomed": "", "icd": "" },
+            { "id": "cannot_determine", "label": "Cannot be determined", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ptnm",
+      "title": "pTNM Classification (AJCC 8th Edition)",
+      "fields": [
+        {
+          "id": "modified_classification",
+          "label": "Modified Classification (if applicable)",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable", "snomed": "", "icd": "" },
+            { "id": "y", "label": "y (post-neoadjuvant therapy)", "snomed": "", "icd": "" },
+            { "id": "r", "label": "r (recurrence)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "pt_category",
+          "label": "pT Category",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pt_not_assigned", "label": "pT not assigned (cannot be determined)", "snomed": "", "icd": "" },
+            { "id": "pt0", "label": "pT0: No evidence of primary tumor", "snomed": "", "icd": "" },
+            { "id": "pt1a", "label": "pT1a: Tumor ≤4 cm, limited to kidney", "snomed": "", "icd": "" },
+            { "id": "pt1b", "label": "pT1b: Tumor >4 cm and ≤7 cm, limited to kidney", "snomed": "", "icd": "" },
+            { "id": "pt1_undetermined", "label": "pT1 (subcategory cannot be determined)", "snomed": "", "icd": "" },
+            { "id": "pt2a", "label": "pT2a: Tumor >7 cm and ≤10 cm, limited to kidney", "snomed": "", "icd": "" },
+            { "id": "pt2b", "label": "pT2b: Tumor >10 cm, limited to kidney", "snomed": "", "icd": "" },
+            { "id": "pt2_undetermined", "label": "pT2 (subcategory cannot be determined)", "snomed": "", "icd": "" },
+            { "id": "pt3a", "label": "pT3a: Extends into renal vein/branches, pelvicalyceal system, or perirenal/renal sinus fat, not beyond Gerota's fascia", "snomed": "", "icd": "" },
+            { "id": "pt3b", "label": "pT3b: Extends into vena cava below diaphragm", "snomed": "", "icd": "" },
+            { "id": "pt3c", "label": "pT3c: Extends into vena cava above diaphragm or invades vena cava wall", "snomed": "", "icd": "" },
+            { "id": "pt3_undetermined", "label": "pT3 (subcategory cannot be determined)", "snomed": "", "icd": "" },
+            { "id": "pt4", "label": "pT4: Invades beyond Gerota's fascia (including ipsilateral adrenal gland)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "t_suffix",
+          "label": "T Suffix (if applicable)",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable", "snomed": "", "icd": "" },
+            { "id": "m", "label": "(m) multiple primary synchronous tumors in a single organ", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "pn_category",
+          "label": "pN Category",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pn_not_assigned_no_nodes", "label": "pN not assigned (no nodes submitted or found)", "snomed": "", "icd": "" },
+            { "id": "pn_not_assigned_cannot_determine", "label": "pN not assigned (cannot be determined)", "snomed": "", "icd": "" },
+            { "id": "pn0", "label": "pN0: No regional lymph node metastasis", "snomed": "", "icd": "" },
+            { "id": "pn1", "label": "pN1: Metastasis in regional lymph node(s)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "pm_category",
+          "label": "pM Category (if confirmed pathologically)",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable — pM cannot be determined from submitted specimen(s)", "snomed": "", "icd": "" },
+            { "id": "pm1", "label": "pM1: Distant metastasis (including non-contiguous adrenal gland involvement)", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings_kidney",
+          "label": "Additional Findings in Kidney (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "insufficient_tissue", "label": "Insufficient tissue", "snomed": "", "icd": "" },
+            { "id": "no_significant_change", "label": "No significant pathologic change identified", "snomed": "", "icd": "" },
+            { "id": "glomerular_disease", "label": "Glomerular disease (specify type)", "snomed": "", "icd": "" },
+            { "id": "tubulointerstitial", "label": "Tubulointerstitial disease (specify type)", "snomed": "", "icd": "" },
+            { "id": "vascular_disease", "label": "Vascular disease (specify type)", "snomed": "", "icd": "" },
+            { "id": "cysts", "label": "Cyst(s) (specify type)", "snomed": "", "icd": "" },
+            { "id": "papillary_adenoma", "label": "Papillary adenoma(s) (specify)", "snomed": "", "icd": "" },
+            { "id": "other", "label": "Other (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "comments",
+          "label": "Comments",
+          "type": "longtext",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": []
+        }
+      ]
+    }
+  ]
+}

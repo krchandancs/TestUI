@@ -1,0 +1,414 @@
+{
+  "id": "rcpath_colorectal_further_investigations",
+  "name": "Reporting Proforma for Further Investigations for Colorectal Carcinoma",
+  "source": "RCPath",
+  "version": "current",
+  "sourceDocument": "Appendix E",
+  "category": "COLORECTAL",
+  "locale": "en-GB",
+  "sections": [
+    {
+      "id": "mmr_ihc",
+      "title": "Mismatch Repair (MMR) Protein Immunohistochemistry",
+      "fields": [
+        {
+          "id": "mlh1_nuclear_expression",
+          "label": "MLH1 Nuclear Expression Intact",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "mlh1_yes",          "label": "Yes",          "snomed": "", "icd": "" },
+            { "id": "mlh1_no",           "label": "No",           "snomed": "", "icd": "" },
+            { "id": "mlh1_equivocal",    "label": "Equivocal",    "snomed": "", "icd": "" },
+            { "id": "mlh1_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "mlh1_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "pms2_nuclear_expression",
+          "label": "PMS2 Nuclear Expression Intact",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pms2_yes",          "label": "Yes",          "snomed": "", "icd": "" },
+            { "id": "pms2_no",           "label": "No",           "snomed": "", "icd": "" },
+            { "id": "pms2_equivocal",    "label": "Equivocal",    "snomed": "", "icd": "" },
+            { "id": "pms2_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "pms2_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "msh2_nuclear_expression",
+          "label": "MSH2 Nuclear Expression Intact",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "msh2_yes",          "label": "Yes",          "snomed": "", "icd": "" },
+            { "id": "msh2_no",           "label": "No",           "snomed": "", "icd": "" },
+            { "id": "msh2_equivocal",    "label": "Equivocal",    "snomed": "", "icd": "" },
+            { "id": "msh2_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "msh2_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "msh6_nuclear_expression",
+          "label": "MSH6 Nuclear Expression Intact",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "msh6_yes",          "label": "Yes",          "snomed": "", "icd": "" },
+            { "id": "msh6_no",           "label": "No",           "snomed": "", "icd": "" },
+            { "id": "msh6_equivocal",    "label": "Equivocal",    "snomed": "", "icd": "" },
+            { "id": "msh6_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "msh6_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "msi_testing",
+      "title": "Microsatellite Instability (MSI) Testing",
+      "fields": [
+        {
+          "id": "msi_status",
+          "label": "MSI Status",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "msi_high",         "label": "MSI-high",      "snomed": "", "icd": "" },
+            { "id": "msi_low",          "label": "MSI-low",       "snomed": "", "icd": "" },
+            { "id": "ms_stable",        "label": "MS-stable",     "snomed": "", "icd": "" },
+            { "id": "msi_test_failed",  "label": "Test failed",   "snomed": "", "icd": "" },
+            { "id": "msi_not_performed","label": "Not performed",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "mlh1_methylation",
+      "title": "MLH1 Promoter Hypermethylation Testing",
+      "fields": [
+        {
+          "id": "mlh1_methylation_status",
+          "label": "MLH1 Promoter Hypermethylation",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "mlh1_meth_present",      "label": "Present",      "snomed": "", "icd": "" },
+            { "id": "mlh1_meth_absent",       "label": "Absent",       "snomed": "", "icd": "" },
+            { "id": "mlh1_meth_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "mlh1_meth_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "molecular_testing",
+      "title": "Molecular Testing",
+      "fields": [
+        {
+          "id": "braf_v600e_status",
+          "label": "BRAF V600E Mutation",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "braf_present",      "label": "Present",      "snomed": "", "icd": "" },
+            { "id": "braf_absent",       "label": "Absent",       "snomed": "", "icd": "" },
+            { "id": "braf_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "braf_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "kras_status",
+          "label": "KRAS Mutation",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "kras_present",      "label": "Present",      "snomed": "", "icd": "" },
+            { "id": "kras_absent",       "label": "Absent",       "snomed": "", "icd": "" },
+            { "id": "kras_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "kras_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "kras_mutation_specify",
+          "label": "KRAS Mutation — Specify",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Complete if KRAS mutation present"
+        },
+        {
+          "id": "nras_status",
+          "label": "NRAS Mutation",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "nras_present",      "label": "Present",      "snomed": "", "icd": "" },
+            { "id": "nras_absent",       "label": "Absent",       "snomed": "", "icd": "" },
+            { "id": "nras_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "nras_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "nras_mutation_specify",
+          "label": "NRAS Mutation — Specify",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Complete if NRAS mutation present"
+        }
+      ]
+    },
+    {
+      "id": "ntrk_testing",
+      "title": "NTRK Fusion Testing",
+      "fields": [
+        {
+          "id": "ntrk_ihc_status",
+          "label": "NTRK Fusion IHC Screening",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ntrk_ihc_present",      "label": "Present",      "snomed": "", "icd": "" },
+            { "id": "ntrk_ihc_absent",       "label": "Absent",       "snomed": "", "icd": "" },
+            { "id": "ntrk_ihc_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "ntrk_ihc_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "ntrk_ngs_status",
+          "label": "NTRK Fusion NGS Testing",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ntrk_ngs_present",      "label": "Present",      "snomed": "", "icd": "" },
+            { "id": "ntrk_ngs_absent",       "label": "Absent",       "snomed": "", "icd": "" },
+            { "id": "ntrk_ngs_test_failed",  "label": "Test failed",  "snomed": "", "icd": "" },
+            { "id": "ntrk_ngs_not_performed","label": "Not performed", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "ntrk_fusion_specify",
+          "label": "NTRK Fusion — Specify",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Complete if NTRK fusion present on NGS"
+        }
+      ]
+    },
+    {
+      "id": "advanced_sequencing",
+      "title": "Advanced Sequencing",
+      "fields": [
+        {
+          "id": "multigene_panel_performed",
+          "label": "Multi-gene Panel Testing",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "multigene_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "multigene_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "multigene_panel_method",
+          "label": "Multi-gene Panel — Method Used",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "multigene_panel_actionable_aberrations",
+          "label": "Multi-gene Panel — Actionable Molecular Aberrations (not listed above)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "exome_sequencing_performed",
+          "label": "Exome Sequencing",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "exome_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "exome_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "exome_sequencing_method",
+          "label": "Exome Sequencing — Method Used",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "exome_sequencing_actionable_aberrations",
+          "label": "Exome Sequencing — Actionable Molecular Aberrations (not listed above)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "whole_genome_sequencing_performed",
+          "label": "Whole Genome Sequencing",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "wgs_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "wgs_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "whole_genome_sequencing_method",
+          "label": "Whole Genome Sequencing — Method Used",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "whole_genome_sequencing_actionable_aberrations",
+          "label": "Whole Genome Sequencing — Actionable Molecular Aberrations (not listed above)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "snomed_codes",
+      "title": "SNOMED Codes",
+      "fields": [
+        {
+          "id": "snomed_t_code",
+          "label": "SNOMED T Code (Topography)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "snomed_m_code",
+          "label": "SNOMED M Code (Morphology)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

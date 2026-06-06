@@ -1,0 +1,621 @@
+{
+  "id": "rcpath_prostate_radical_prostatectomy",
+  "name": "Reporting Proforma for Radical Prostatectomies",
+  "source": "RCPath",
+  "version": "current",
+  "sourceDocument": "Appendix F",
+  "category": "PROSTATE",
+  "locale": "en-GB",
+  "sections": [
+    {
+      "id": "clinical_information",
+      "title": "Clinical Information",
+      "fields": [
+        {
+          "id": "pre_biopsy_psa",
+          "label": "Pre-biopsy PSA (ng/mL)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Numerical value in ng/mL"
+        },
+        {
+          "id": "pre_biopsy_psa_availability",
+          "label": "Pre-biopsy PSA Availability",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "psa_not_available",  "label": "Not available",  "snomed": "", "icd": "" },
+            { "id": "psa_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "Only applicable if no value given for Pre-biopsy PSA"
+        }
+      ]
+    },
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "specimen_weight_g",
+          "label": "Specimen Weight (g)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "seminal_vesicles_present",
+          "label": "Seminal Vesicles",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "sv_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "sv_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "seminal_vesicle_laterality",
+          "label": "Seminal Vesicle — Laterality",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "sv_left",           "label": "Left",           "snomed": "", "icd": "" },
+            { "id": "sv_right",          "label": "Right",          "snomed": "", "icd": "" },
+            { "id": "sv_bilateral",      "label": "Bilateral",      "snomed": "", "icd": "" },
+            { "id": "sv_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "Not applicable if seminal vesicles absent"
+        },
+        {
+          "id": "lymph_nodes_present",
+          "label": "Lymph Nodes",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ln_present", "label": "Present", "snomed": "", "icd": "" },
+            { "id": "ln_absent",  "label": "Absent",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "lymph_nodes_laterality",
+          "label": "Lymph Nodes — Laterality / Site",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "ln_left",           "label": "Left",           "snomed": "", "icd": "" },
+            { "id": "ln_right",          "label": "Right",          "snomed": "", "icd": "" },
+            { "id": "ln_preprostatic",   "label": "Pre-prostatic",  "snomed": "", "icd": "" },
+            { "id": "ln_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "Not applicable if lymph nodes absent"
+        }
+      ]
+    },
+    {
+      "id": "tumour_pathology",
+      "title": "Tumour Pathology",
+      "fields": [
+        {
+          "id": "histological_tumour_type",
+          "label": "Histological Tumour Type",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "acinar_adenocarcinoma",           "label": "Acinar adenocarcinoma",              "snomed": "", "icd": "" },
+            { "id": "prostatic_ductal_adenocarcinoma",  "label": "Prostatic ductal adenocarcinoma",    "snomed": "", "icd": "" },
+            { "id": "small_cell_neuroendocrine",        "label": "Small cell neuroendocrine carcinoma","snomed": "", "icd": "" },
+            { "id": "no_tumour",                        "label": "No tumour",                         "snomed": "", "icd": "" },
+            { "id": "tumour_type_other",                "label": "Other",                             "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "histological_tumour_type_other_specify",
+          "label": "Histological Tumour Type — Other (specify)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if 'Other' selected"
+        },
+        {
+          "id": "location_dominant_tumour",
+          "label": "Location of Dominant Tumour",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "grading",
+      "title": "Gleason Score and Grade Group",
+      "fields": [
+        {
+          "id": "gleason_applicable",
+          "label": "Gleason Score Applicable",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gleason_applicable",     "label": "Applicable",     "snomed": "", "icd": "" },
+            { "id": "gleason_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "primary_gleason_grade",
+          "label": "Primary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15210",
+          "icd": "",
+          "options": [
+            { "id": "primary_2",             "label": "2",              "snomed": "", "icd": "" },
+            { "id": "primary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "primary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "primary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "primary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15210"
+        },
+        {
+          "id": "secondary_gleason_grade",
+          "label": "Secondary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15220",
+          "icd": "",
+          "options": [
+            { "id": "secondary_2",             "label": "2",              "snomed": "", "icd": "" },
+            { "id": "secondary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "secondary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "secondary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "secondary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15220"
+        },
+        {
+          "id": "tertiary_gleason_grade",
+          "label": "Tertiary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15230",
+          "icd": "",
+          "options": [
+            { "id": "tertiary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "tertiary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "tertiary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "tertiary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15230. Only recorded when higher than primary or secondary."
+        },
+        {
+          "id": "gleason_score_total",
+          "label": "Gleason Score — Total",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gleason_4",              "label": "4",              "snomed": "", "icd": "" },
+            { "id": "gleason_5",              "label": "5",              "snomed": "", "icd": "" },
+            { "id": "gleason_6",              "label": "6",              "snomed": "", "icd": "" },
+            { "id": "gleason_7",              "label": "7",              "snomed": "", "icd": "" },
+            { "id": "gleason_8",              "label": "8",              "snomed": "", "icd": "" },
+            { "id": "gleason_9",              "label": "9",              "snomed": "", "icd": "" },
+            { "id": "gleason_10",             "label": "10",             "snomed": "", "icd": "" },
+            { "id": "gleason_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "grade_group",
+          "label": "Grade Group",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gg_1",              "label": "1",              "snomed": "", "icd": "" },
+            { "id": "gg_2",              "label": "2",              "snomed": "", "icd": "" },
+            { "id": "gg_3",              "label": "3",              "snomed": "", "icd": "" },
+            { "id": "gg_4",              "label": "4",              "snomed": "", "icd": "" },
+            { "id": "gg_5",              "label": "5",              "snomed": "", "icd": "" },
+            { "id": "gg_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "invasive_cribriform_intraductal",
+          "label": "Invasive Cribriform and/or Intraductal Carcinoma",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "cribriform_not_present", "label": "Not present", "snomed": "", "icd": "" },
+            { "id": "cribriform_present",     "label": "Present",     "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "local_extension",
+      "title": "Local Extension",
+      "fields": [
+        {
+          "id": "extraprostatic_extension",
+          "label": "Extraprostatic Extension",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "epe_not_identified", "label": "Not identified",  "snomed": "", "icd": "" },
+            { "id": "epe_present",        "label": "Present",         "snomed": "", "icd": "" },
+            { "id": "epe_indeterminate",  "label": "Indeterminate",   "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "extraprostatic_extension_location",
+          "label": "Extraprostatic Extension — Location",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Not applicable if not identified"
+        },
+        {
+          "id": "extraprostatic_extension_extent",
+          "label": "Extraprostatic Extension — Extent",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "epe_focal",          "label": "Focal",           "snomed": "", "icd": "" },
+            { "id": "epe_established",    "label": "Established",     "snomed": "", "icd": "" },
+            { "id": "epe_not_applicable", "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": "Not applicable if EPE not identified"
+        },
+        {
+          "id": "bladder_neck_involvement",
+          "label": "Bladder Neck Involvement",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "bn_involved",        "label": "Involved",        "snomed": "", "icd": "" },
+            { "id": "bn_not_involved",    "label": "Not involved",    "snomed": "", "icd": "" },
+            { "id": "bn_not_applicable",  "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "seminal_vesicle_involvement",
+          "label": "Seminal Vesicle Involvement",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "sv_involved",       "label": "Involved",        "snomed": "", "icd": "" },
+            { "id": "sv_not_involved",   "label": "Not involved",    "snomed": "", "icd": "" },
+            { "id": "sv_not_applicable", "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Surgical Margins",
+      "fields": [
+        {
+          "id": "margin_status",
+          "label": "Margin Status",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "pCR0880",
+          "icd": "",
+          "options": [
+            { "id": "margin_involved",      "label": "Involved",      "snomed": "05", "icd": "" },
+            { "id": "margin_not_involved",  "label": "Not involved",  "snomed": "01", "icd": "" },
+            { "id": "margin_indeterminate", "label": "Indeterminate", "snomed": "06", "icd": "" }
+          ],
+          "note": "COSD: pCR0880"
+        },
+        {
+          "id": "margin_extent",
+          "label": "Margin Extent",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "margin_lt3mm",       "label": "<3 mm",          "snomed": "", "icd": "" },
+            { "id": "margin_gte3mm",      "label": "≥3 mm",          "snomed": "", "icd": "" },
+            { "id": "margin_extent_na",   "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "Not applicable if margin not involved"
+        },
+        {
+          "id": "margin_location",
+          "label": "Margin Location",
+          "type": "checkboxes",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "margin_apical",           "label": "Apical",           "snomed": "", "icd": "" },
+            { "id": "margin_bladder_neck",     "label": "Bladder neck",     "snomed": "", "icd": "" },
+            { "id": "margin_circumferential",  "label": "Circumferential",  "snomed": "", "icd": "" },
+            { "id": "margin_location_na",      "label": "Not applicable",   "snomed": "", "icd": "" }
+          ],
+          "note": "Not applicable if margin not involved"
+        },
+        {
+          "id": "circumferential_margin_type",
+          "label": "Circumferential Margin — Type",
+          "type": "checkboxes",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "circ_intraprostatic",  "label": "Intraprostatic",  "snomed": "", "icd": "" },
+            { "id": "circ_extraprostatic",  "label": "Extraprostatic",  "snomed": "", "icd": "" },
+            { "id": "circ_not_applicable",  "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": "Only applicable if circumferential margin involved"
+        },
+        {
+          "id": "circumferential_margin_location",
+          "label": "Circumferential Margin — Location",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "e.g. posterolateral right, anterior"
+        }
+      ]
+    },
+    {
+      "id": "vascular_invasion",
+      "title": "Vascular Invasion",
+      "fields": [
+        {
+          "id": "lymphovascular_invasion",
+          "label": "Lymphovascular Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "pCR0870",
+          "icd": "",
+          "options": [
+            { "id": "lvi_not_identified", "label": "Not identified", "snomed": "NU", "icd": "" },
+            { "id": "lvi_present",        "label": "Present",        "snomed": "YU", "icd": "" }
+          ],
+          "note": "COSD: pCR0870"
+        }
+      ]
+    },
+    {
+      "id": "lymph_node_assessment",
+      "title": "Lymph Node Assessment",
+      "fields": [
+        {
+          "id": "number_lymph_nodes_examined",
+          "label": "Number of Lymph Nodes Examined",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "number_positive_lymph_nodes",
+          "label": "Number of Positive Lymph Nodes",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Integer"
+        },
+        {
+          "id": "max_dimension_largest_deposit_mm",
+          "label": "Maximum Dimension of Largest Deposit (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tnm_stage",
+      "title": "TNM Stage",
+      "fields": [
+        {
+          "id": "t_category",
+          "label": "T Category",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "pCR0910",
+          "icd": "",
+          "options": [
+            { "id": "pT0",  "label": "pT0",  "snomed": "", "icd": "" },
+            { "id": "pT2",  "label": "pT2",  "snomed": "", "icd": "" },
+            { "id": "pT3a", "label": "pT3a", "snomed": "", "icd": "" },
+            { "id": "pT3b", "label": "pT3b", "snomed": "", "icd": "" },
+            { "id": "pT4",  "label": "pT4",  "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pCR0910"
+        },
+        {
+          "id": "n_category",
+          "label": "N Category",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pCR0920",
+          "icd": "",
+          "options": [
+            { "id": "pNx", "label": "pNx", "snomed": "", "icd": "" },
+            { "id": "pN0", "label": "pN0", "snomed": "", "icd": "" },
+            { "id": "pN1", "label": "pN1", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pCR0920"
+        }
+      ]
+    },
+    {
+      "id": "molecular_block",
+      "title": "Representative Block for Molecular Studies",
+      "fields": [
+        {
+          "id": "representative_molecular_block",
+          "label": "Representative Block for Molecular Studies",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Block identifier; or 'Not applicable'"
+        },
+        {
+          "id": "molecular_block_tumour_content",
+          "label": "Tumour Content of Molecular Block",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "content_0_20",         "label": "0–20%",          "snomed": "", "icd": "" },
+            { "id": "content_20_30",        "label": "20–30%",         "snomed": "", "icd": "" },
+            { "id": "content_31_40",        "label": "31–40%",         "snomed": "", "icd": "" },
+            { "id": "content_41_50",        "label": "41–50%",         "snomed": "", "icd": "" },
+            { "id": "content_51_60",        "label": "51–60%",         "snomed": "", "icd": "" },
+            { "id": "content_61_70",        "label": "61–70%",         "snomed": "", "icd": "" },
+            { "id": "content_71_80",        "label": "71–80%",         "snomed": "", "icd": "" },
+            { "id": "content_91_100",       "label": "91–100%",        "snomed": "", "icd": "" },
+            { "id": "content_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "snomed_codes",
+      "title": "SNOMED Codes",
+      "fields": [
+        {
+          "id": "snomed_t_code",
+          "label": "SNOMED Topography Code",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "pCR6410",
+          "icd": "",
+          "options": [],
+          "note": "May have multiple codes. COSD: pCR6410"
+        },
+        {
+          "id": "snomed_m_code",
+          "label": "SNOMED Morphology Code",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "pCR6420",
+          "icd": "",
+          "options": [],
+          "note": "May have multiple codes. COSD: pCR6420"
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

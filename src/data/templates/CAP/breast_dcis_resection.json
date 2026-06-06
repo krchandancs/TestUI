@@ -1,0 +1,642 @@
+{
+  "id": "breast_dcis_resection",
+  "name": "Protocol for the Examination of Resection Specimens From Patients With Ductal Carcinoma In Situ (DCIS) of the Breast",
+  "source": "CAP",
+  "version": "4.3.0.2",
+  "category": "BREAST",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "excision_less_than_total_mastectomy",
+              "label": "Excision less than total mastectomy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "total_mastectomy",
+              "label": "Total mastectomy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "procedure_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "procedure_not_specified",
+              "label": "Not specified",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "right",
+              "label": "Right",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "left",
+              "label": "Left",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "laterality_not_specified",
+              "label": "Not specified",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "tumor_type",
+          "label": "Tumor Type",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "dcis_without_invasion",
+              "label": "Ductal carcinoma in situ without invasive carcinoma or microinvasion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "paget_nipple_no_invasion",
+              "label": "Paget disease of the nipple not associated with invasive breast carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "encapsulated_papillary_no_invasion",
+              "label": "Encapsulated papillary carcinoma without invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "solid_papillary_no_invasion",
+              "label": "Solid papillary carcinoma without invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_type_other",
+              "label": "Other tumor type not listed",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "tumor_site",
+          "label": "Tumor Site",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "upper_outer_quadrant",
+              "label": "Upper outer quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lower_outer_quadrant",
+              "label": "Lower outer quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "upper_inner_quadrant",
+              "label": "Upper inner quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lower_inner_quadrant",
+              "label": "Lower inner quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "central",
+              "label": "Central",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "nipple",
+              "label": "Nipple",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "clock_position",
+              "label": "Clock position",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_site_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_site_not_specified",
+              "label": "Not specified",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_size_extent",
+          "label": "Size (Extent) of DCIS",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "dcis_architectural_patterns",
+          "label": "Architectural Patterns",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "comedo",
+              "label": "Comedo",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "cribriform",
+              "label": "Cribriform",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "micropapillary",
+              "label": "Micropapillary",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "papillary",
+              "label": "Papillary",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "solid",
+              "label": "Solid",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "arch_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_nuclear_grade",
+          "label": "Nuclear Grade",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "grade_1_low",
+              "label": "Grade I (low)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "grade_2_intermediate",
+              "label": "Grade II (intermediate)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "grade_3_high",
+              "label": "Grade III (high)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "grade_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis_necrosis",
+          "label": "Necrosis",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "necrosis_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "necrosis_focal",
+              "label": "Present, focal (small foci or single cell necrosis)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "necrosis_central_comedo",
+              "label": "Present, central (expansive \"comedo\" necrosis)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "microcalcifications",
+          "label": "Microcalcifications",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "microcalc_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_in_dcis",
+              "label": "Present in DCIS",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_in_non_neoplastic",
+              "label": "Present in non-neoplastic tissue",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "lcis",
+          "label": "Lobular Carcinoma In Situ (LCIS)",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "lcis_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lcis_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status_dcis",
+          "label": "Margin Status for DCIS",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "margin_not_applicable_dcis",
+              "label": "Not applicable (no DCIS in specimen)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "all_margins_negative_dcis",
+              "label": "All margins negative for DCIS",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_present_at_margin",
+              "label": "DCIS present at margin",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "closest_margins_dcis",
+          "label": "Closest Margin(s) to DCIS",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "dcis_margin_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_anterior",
+              "label": "Anterior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_posterior",
+              "label": "Posterior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_superior",
+              "label": "Superior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_inferior",
+              "label": "Inferior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_medial",
+              "label": "Medial",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_lateral",
+              "label": "Lateral",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "margins_involved_dcis",
+          "label": "Margin(s) Involved by DCIS",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "dcis_margin_involved_anterior",
+              "label": "Anterior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_posterior",
+              "label": "Posterior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_superior",
+              "label": "Superior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_inferior",
+              "label": "Inferior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_medial",
+              "label": "Medial (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_lateral",
+              "label": "Lateral (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_other",
+              "label": "Other (specify margin(s) and, if possible, extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "distance_dcis_to_named_margins",
+          "label": "Distance from DCIS to Named Margins",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "margin_comment",
+          "label": "Margin Comment",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "regional_lymph_nodes",
+      "title": "Regional Lymph Nodes",
+      "fields": [
+        {
+          "id": "regional_ln_status",
+          "label": "Regional Lymph Node Status",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "no_nodes_submitted",
+              "label": "Not applicable (no regional lymph nodes submitted or found)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "nodes_present",
+              "label": "Regional lymph nodes present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "all_nodes_negative",
+              "label": "All regional lymph nodes negative for tumor",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_present_nodes",
+              "label": "Tumor present in regional lymph node(s)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "total_ln_examined",
+          "label": "Total Number of Lymph Nodes Examined",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "regional_ln_comment",
+          "label": "Regional Lymph Node Comment",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ptnm_classification",
+      "title": "Ptnm Classification",
+      "fields": [
+        {
+          "id": "ptnm_classification",
+          "label": "pTNM Classification (AJCC 8th Edition)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1110 @@
+{
+  "id": "breast_invasive",
+  "name": "Protocol for the Examination of Resection Specimens from Patients with Invasive Carcinoma of the Breast",
+  "source": "CAP",
+  "version": "4.10.0.0",
+  "category": "BREAST",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "excision_less_than_total_mastectomy",
+              "label": "Excision (less than total mastectomy)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "total_mastectomy",
+              "label": "Total mastectomy (including nipple-sparing and skin-sparing mastectomy)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "procedure_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "procedure_not_specified",
+              "label": "Not specified",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "right",
+              "label": "Right",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "left",
+              "label": "Left",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "laterality_not_specified",
+              "label": "Not specified",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "tumor_site",
+          "label": "Tumor Site",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "upper_outer_quadrant",
+              "label": "Upper outer quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lower_outer_quadrant",
+              "label": "Lower outer quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "upper_inner_quadrant",
+              "label": "Upper inner quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lower_inner_quadrant",
+              "label": "Lower inner quadrant",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "central",
+              "label": "Central",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "nipple",
+              "label": "Nipple",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "clock_position",
+              "label": "Clock position",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_site_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_site_not_specified",
+              "label": "Not specified",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "no_residual_invasive",
+              "label": "No residual invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "invasive_nst",
+              "label": "Invasive carcinoma of no special type (ductal)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microinvasive",
+              "label": "Micro-invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "invasive_lobular",
+              "label": "Invasive lobular carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "mixed_ductal_lobular",
+              "label": "Invasive carcinoma with mixed ductal and lobular features",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "invasive_with_features",
+              "label": "Invasive carcinoma with features of",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tubular",
+              "label": "Tubular carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "invasive_cribriform",
+              "label": "Invasive cribriform carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "mucinous",
+              "label": "Mucinous carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "invasive_micropapillary",
+              "label": "Invasive micropapillary carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "apocrine",
+              "label": "Apocrine adenocarcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "metaplastic",
+              "label": "Metaplastic carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "encapsulated_papillary_with_invasion",
+              "label": "Encapsulated papillary carcinoma with invasion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "solid_papillary_with_invasion",
+              "label": "Solid papillary carcinoma with invasion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "intraductal_papillary_with_invasion",
+              "label": "Intraductal papillary adenocarcinoma with invasion",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "adenoid_cystic",
+              "label": "Adenoid cystic carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "neuroendocrine_tumor",
+              "label": "Neuroendocrine tumor",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "neuroendocrine_carcinoma",
+              "label": "Neuroendocrine carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "type_cannot_be_determined",
+              "label": "Invasive carcinoma, type cannot be determined",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "histologic_other",
+              "label": "Other histologic type not listed",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "histologic_grade",
+          "label": "Histologic Grade (Nottingham Histologic Score)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "tumor_size",
+          "label": "Tumor Size",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "tumor_focality",
+          "label": "Tumor Focality",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "single_focus",
+              "label": "Single focus of invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "multiple_foci",
+              "label": "Multiple foci of invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dcis",
+          "label": "Ductal Carcinoma In Situ (DCIS)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "tumor_extent",
+          "label": "Tumor Extent",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "lvi",
+          "label": "Lymphatic and / or Vascular Invasion",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "lvi_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lvi_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "lvi_cannot_determine",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "dermal_lvi",
+          "label": "Dermal Lymphatic and / or Vascular Invasion",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "no_skin_present",
+              "label": "No skin present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dermal_lvi_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dermal_lvi_present",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dermal_lvi_cannot_determine",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "microcalcifications",
+          "label": "Microcalcifications",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "microcalc_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_in_dcis",
+              "label": "Present in DCIS",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_in_invasive",
+              "label": "Present in invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_in_non_neoplastic",
+              "label": "Present in non-neoplastic tissue",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "microcalc_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "treatment_effect_breast",
+          "label": "Treatment Effect in the Breast",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "no_presurgical_therapy",
+              "label": "No known presurgical therapy",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "no_definite_response_breast",
+              "label": "No definite response to presurgical therapy in the invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "probable_or_definite_response_breast",
+              "label": "Probable or definite response to presurgical therapy in the invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "no_residual_invasive_after_therapy",
+              "label": "No residual invasive carcinoma is present in the breast after presurgical therapy",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "treatment_effect_nodes",
+          "label": "Treatment Effect in the Lymph Nodes",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "nodes_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "no_definite_response_nodes",
+              "label": "No definite response to presurgical therapy in metastatic carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "probable_or_definite_response_nodes",
+              "label": "Probable or definite response to presurgical therapy in metastatic carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "no_ln_metastases_with_scarring",
+              "label": "No lymph node metastases. Fibrous scarring or histiocytic aggregates, possibly related to prior lymph node metastases with pathologic complete response",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "no_ln_metastases_no_scarring",
+              "label": "No lymph node metastases and no fibrous scarring or histiocytic aggregates in the nodes",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "rcb_parameters",
+          "label": "Residual Cancer Burden (RCB) Parameters",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status_invasive",
+          "label": "Margin Status for Invasive Carcinoma",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "margin_not_applicable_invasive",
+              "label": "Not applicable (residual invasive carcinoma in specimen is absent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "all_margins_negative_invasive",
+              "label": "All margins negative for invasive carcinoma",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "invasive_present_at_margin",
+              "label": "Invasive carcinoma present at margin",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "closest_margins_invasive",
+          "label": "Closest Margin(s) to Invasive Carcinoma",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "inv_margin_anterior",
+              "label": "Anterior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_posterior",
+              "label": "Posterior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_superior",
+              "label": "Superior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_inferior",
+              "label": "Inferior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_medial",
+              "label": "Medial",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_lateral",
+              "label": "Lateral",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "margins_involved_invasive",
+          "label": "Margin(s) Involved by Invasive Carcinoma",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "inv_margin_involved_anterior",
+              "label": "Anterior (specify extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_posterior",
+              "label": "Posterior (specify extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_superior",
+              "label": "Superior (specify extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_inferior",
+              "label": "Inferior (specify extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_medial",
+              "label": "Medial (specify extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_lateral",
+              "label": "Lateral (specify extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_other",
+              "label": "Other (specify margin(s) and extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "inv_margin_involved_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "distance_invasive_to_named_margins",
+          "label": "Distance from Invasive Carcinoma to Named Margins",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "margin_status_dcis",
+          "label": "Margin Status for DCIS",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "margin_not_applicable_dcis",
+              "label": "Not applicable (no DCIS in specimen)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "all_margins_negative_dcis",
+              "label": "All margins negative for DCIS",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_present_at_margin",
+              "label": "DCIS present at margin",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "closest_margins_dcis",
+          "label": "Closest Margin(s) to DCIS",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "dcis_margin_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_anterior",
+              "label": "Anterior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_posterior",
+              "label": "Posterior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_superior",
+              "label": "Superior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_inferior",
+              "label": "Inferior",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_medial",
+              "label": "Medial",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_lateral",
+              "label": "Lateral",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "margins_involved_dcis",
+          "label": "Margin(s) Involved by DCIS",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "dcis_margin_involved_anterior",
+              "label": "Anterior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_posterior",
+              "label": "Posterior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_superior",
+              "label": "Superior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_inferior",
+              "label": "Inferior (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_medial",
+              "label": "Medial (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_lateral",
+              "label": "Lateral (specify extent, if possible)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_other",
+              "label": "Other (specify margin(s) and, if possible, extent)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dcis_margin_involved_cannot_determine",
+              "label": "Cannot be determined (explain)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "distance_dcis_to_named_margins",
+          "label": "Distance from DCIS to Named Margins",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "margin_comment",
+          "label": "Margin Comment",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "regional_lymph_nodes",
+      "title": "Regional Lymph Nodes",
+      "fields": [
+        {
+          "id": "regional_ln_status",
+          "label": "Regional Lymph Node Status",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "no_nodes_submitted",
+              "label": "Not applicable (no regional lymph nodes submitted or found)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "nodes_present",
+              "label": "Regional lymph nodes present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "all_nodes_negative",
+              "label": "All regional lymph nodes negative for tumor",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "tumor_present_nodes",
+              "label": "Tumor present in regional lymph node(s)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "number_ln_macrometastases",
+          "label": "Number of Lymph Nodes with Macrometastases (greater than 2 mm)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "number_ln_micrometastases",
+          "label": "Number of Lymph Nodes with Micrometastases (greater than 0.2 mm to 2 mm and / or greater than 200 cells)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "number_ln_itc",
+          "label": "Number of Lymph Nodes with Isolated Tumor Cells (0.2 mm or less OR 200 cells or less)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "largest_nodal_met_mm",
+          "label": "Size of Largest Nodal Metastatic Deposit (mm)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "extranodal_extension",
+          "label": "Extranodal Extension",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "ene_not_identified",
+              "label": "Not identified",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "ene_2mm_or_less",
+              "label": "Present, 2 mm or less",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "ene_greater_than_2mm",
+              "label": "Present, greater than 2 mm",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "ene_present_unspecified",
+              "label": "Present",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "ene_cannot_determine",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "ene_other",
+              "label": "Other (specify)",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "id": "total_ln_examined",
+          "label": "Total Number of Lymph Nodes Examined (sentinel and non-sentinel)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "sentinel_ln_examined",
+          "label": "Number of Sentinel Nodes Examined (if applicable)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "regional_ln_comment",
+          "label": "Regional Lymph Node Comment",
+          "type": "text",
+          "required": false,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "distant_metastasis",
+      "title": "Distant Metastasis",
+      "fields": [
+        {
+          "id": "distant_metastasis",
+          "label": "Distant Site(s) Involved",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            {
+              "id": "dm_not_applicable",
+              "label": "Not applicable",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_non_regional_ln",
+              "label": "Non-regional lymph node(s)",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_lung",
+              "label": "Lung",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_liver",
+              "label": "Liver",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_bone",
+              "label": "Bone",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_brain",
+              "label": "Brain",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_other",
+              "label": "Other",
+              "snomed": "",
+              "icd": ""
+            },
+            {
+              "id": "dm_cannot_determine",
+              "label": "Cannot be determined",
+              "snomed": "",
+              "icd": ""
+            }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "ptnm_classification",
+      "title": "Ptnm Classification",
+      "fields": [
+        {
+          "id": "ptnm_classification",
+          "label": "pTNM Classification (AJCC 8th Edition)",
+          "type": "text",
+          "required": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

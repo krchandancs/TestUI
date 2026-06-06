@@ -1,0 +1,463 @@
+{
+  "id": "wilms_resection",
+  "name": "CAP Kidney — Wilms & Pediatric Renal Tumors Resection",
+  "source": "CAP",
+  "version": "4.4.0.0",
+  "category": "KIDNEY",
+  "standard": "COG / SIOP",
+  "sections": [
+    {
+      "id": "expert_consultation",
+      "title": "Expert Consultation",
+      "fields": [
+        {
+          "id": "expert_consultation",
+          "label": "Expert Consultation",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "pending",        "label": "Pending — protocol completion awaiting expert consultation", "snomed": "", "icd": "" },
+            { "id": "completed",      "label": "Completed — protocol or elements performed following expert consultation", "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "partial_nephrectomy", "label": "Partial nephrectomy",    "snomed": "", "icd": "" },
+            { "id": "radical_nephrectomy", "label": "Radical nephrectomy",    "snomed": "", "icd": "" },
+            { "id": "other",               "label": "Other (specify)",        "snomed": "", "icd": "" },
+            { "id": "not_specified",        "label": "Not specified",          "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "other_tissue_received",
+          "label": "Other Tissue Received (if applicable, select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable",  "snomed": "", "icd": "" },
+            { "id": "adrenal",        "label": "Adrenal",         "snomed": "", "icd": "" },
+            { "id": "liver",          "label": "Liver",           "snomed": "", "icd": "" },
+            { "id": "lung",           "label": "Lung",            "snomed": "", "icd": "" },
+            { "id": "other",          "label": "Other (specify)", "snomed": "", "icd": "" },
+            { "id": "not_specified",  "label": "Not specified",   "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "nephrectomy_weight_g",
+          "label": "Nephrectomy Weight (g)",
+          "type": "numeric",
+          "required": true,
+          "snomed": "", "icd": "", "options": []
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "right",         "label": "Right",         "snomed": "", "icd": "" },
+            { "id": "left",          "label": "Left",          "snomed": "", "icd": "" },
+            { "id": "not_specified", "label": "Not specified", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "wilms_favorable",        "label": "Wilms tumor, favorable / non-anaplastic histology", "snomed": "302849000", "icd": "" },
+            { "id": "wilms_focal_anaplasia",  "label": "Wilms tumor, focal anaplasia",                      "snomed": "",           "icd": "" },
+            { "id": "wilms_diffuse_anaplasia","label": "Wilms tumor, diffuse anaplasia",                     "snomed": "",           "icd": "" },
+            { "id": "cmn",                    "label": "Congenital mesoblastic nephroma (cellular, classic, or mixed)", "snomed": "404037005", "icd": "" },
+            { "id": "ccsk",                   "label": "Clear cell sarcoma of kidney",                       "snomed": "413448000", "icd": "" },
+            { "id": "rhabdoid",               "label": "Rhabdoid tumor",                                     "snomed": "404039008", "icd": "" },
+            { "id": "other",                  "label": "Other (specify)",                                    "snomed": "",           "icd": "" },
+            { "id": "cannot_determine",       "label": "Malignant neoplasm, type cannot be determined (explain)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "tumor_size_cm",
+          "label": "Tumor Size — Greatest Dimension (cm)",
+          "type": "numeric",
+          "required": true,
+          "snomed": "", "icd": "", "options": []
+        },
+        {
+          "id": "tumor_focality",
+          "label": "Tumor Focality",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "unifocal",   "label": "Unifocal",   "snomed": "", "icd": "" },
+            { "id": "multifocal", "label": "Multifocal", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "number_of_tumors",
+          "label": "Number of Tumors in Specimen / Submitted from One Kidney",
+          "type": "numeric",
+          "required": false,
+          "snomed": "", "icd": "", "options": [],
+          "visibleWhen": { "fieldId": "tumor_focality", "answerId": "multifocal" }
+        },
+        {
+          "id": "nephrogenic_rests",
+          "label": "Nephrogenic Rests",
+          "type": "dropdown",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_identified",             "label": "Not identified",                        "snomed": "", "icd": "" },
+            { "id": "intralobar",                 "label": "Intralobar",                            "snomed": "", "icd": "" },
+            { "id": "perilobar_diffuse",          "label": "Perilobar, diffuse and hyperplastic",   "snomed": "", "icd": "" },
+            { "id": "perilobar_multifocal",       "label": "Perilobar, multifocal",                 "snomed": "", "icd": "" },
+            { "id": "perilobar_focal",            "label": "Perilobar, focal",                      "snomed": "", "icd": "" },
+            { "id": "perilobar",                  "label": "Perilobar",                             "snomed": "", "icd": "" },
+            { "id": "present_unclassified",       "label": "Present, unclassified",                 "snomed": "", "icd": "" },
+            { "id": "cannot_determine",           "label": "Cannot be determined (specify)",        "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "tumor_disruption",
+          "label": "Gross or Microscopic Evidence of Tumor Disruption (pre-operative rupture or intra-operative spillage)",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "identified",      "label": "Identified",                    "snomed": "", "icd": "" },
+            { "id": "not_identified",  "label": "Not identified",                "snomed": "", "icd": "" },
+            { "id": "cannot_determine","label": "Cannot be determined (specify)","snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "renal_sinus_involvement",
+          "label": "Renal Sinus Involvement by Viable Tumor",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_identified",  "label": "Not identified",                                                                                           "snomed": "", "icd": "" },
+            { "id": "minimal",         "label": "Minimal extension into renal sinus soft tissue (single focus <5 mm, located >5 mm from nearest margin)", "snomed": "", "icd": "" },
+            { "id": "more_than_minimal","label":"More than minimal extension into renal sinus soft tissue",                                                 "snomed": "", "icd": "" },
+            { "id": "cannot_determine","label": "Cannot be determined (explain)",                                                                           "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "extrarenal_vascular",
+          "label": "Extra-renal Vascular Involvement (renal vein, renal sinus, perinephric soft tissue, other)",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_identified",  "label": "Not identified",                 "snomed": "", "icd": "" },
+            { "id": "present",         "label": "Present",                        "snomed": "", "icd": "" },
+            { "id": "cannot_determine","label": "Cannot be determined (explain)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "capsule_extension",
+          "label": "Extension Beyond Renal Capsule by Viable Tumor",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_identified",       "label": "Not identified",                                     "snomed": "", "icd": "" },
+            { "id": "present",              "label": "Present",                                            "snomed": "", "icd": "" },
+            { "id": "present_pseudocapsule","label": "Present but contained within pseudocapsule (SIOP only)", "snomed": "", "icd": "" },
+            { "id": "cannot_determine",     "label": "Cannot be determined (explain)",                     "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "adjacent_organ_extension",
+          "label": "Direct Extension into Adjacent Organs by Viable Tumor",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_identified",       "label": "Not identified",                                                "snomed": "", "icd": "" },
+            { "id": "adrenal_pseudocapsule","label": "Present in adrenal gland only AND with pseudocapsule (SIOP only)", "snomed": "", "icd": "" },
+            { "id": "present",              "label": "Present (specify sites)",                                       "snomed": "", "icd": "" },
+            { "id": "cannot_determine",     "label": "Cannot be determined (explain)",                                "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "posttherapy_classification_system",
+          "label": "Posttherapy Histologic Classification — Staging System",
+          "type": "dropdown",
+          "required": false,
+          "note": "Complete only if patient received preoperative therapy",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "cog",  "label": "COG (Children's Oncology Group)", "snomed": "", "icd": "" },
+            { "id": "siop", "label": "SIOP (International Society of Pediatric Oncology)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "posttherapy_cog",
+          "label": "COG Posttherapy Classification",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "", "icd": "",
+          "visibleWhen": { "fieldId": "posttherapy_classification_system", "answerId": "cog" },
+          "options": [
+            { "id": "not_applicable",    "label": "Not applicable (no known preoperative therapy)", "snomed": "", "icd": "" },
+            { "id": "low_risk",          "label": "Low risk — no viable Wilms tumor other than scattered nephroblastic tubules", "snomed": "", "icd": "" },
+            { "id": "intermediate_lt33", "label": "Intermediate risk — viable tumor <33% of mass, regardless of histology", "snomed": "", "icd": "" },
+            { "id": "intermediate_gt33_blastemal_lt66", "label": "Intermediate risk — viable tumor >33%, blastemal histology <66% of viable tumor", "snomed": "", "icd": "" },
+            { "id": "intermediate_nos",  "label": "Intermediate risk, NOS", "snomed": "", "icd": "" },
+            { "id": "high_risk",         "label": "High risk — viable tumor >33% with blastemal histology >66% of viable tumor", "snomed": "", "icd": "" },
+            { "id": "cannot_determine",  "label": "Cannot be determined", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "posttherapy_siop",
+          "label": "SIOP Posttherapy Classification",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "", "icd": "",
+          "visibleWhen": { "fieldId": "posttherapy_classification_system", "answerId": "siop" },
+          "options": [
+            { "id": "not_applicable",          "label": "Not applicable (no known preoperative therapy)", "snomed": "", "icd": "" },
+            { "id": "low_risk",                "label": "Low risk — no viable Wilms tumor other than scattered nephroblastic tubules", "snomed": "", "icd": "" },
+            { "id": "intermediate_lt33",       "label": "Intermediate risk — viable tumor <33% of mass", "snomed": "", "icd": "" },
+            { "id": "intermediate_epithelial", "label": "Intermediate risk epithelial — viable tumor >33%, epithelial histology >66%", "snomed": "", "icd": "" },
+            { "id": "intermediate_stromal",    "label": "Intermediate risk stromal — viable tumor >33%, stromal histology >66%", "snomed": "", "icd": "" },
+            { "id": "intermediate_mixed",      "label": "Intermediate risk mixed", "snomed": "", "icd": "" },
+            { "id": "intermediate_nos",        "label": "Intermediate risk, NOS", "snomed": "", "icd": "" },
+            { "id": "high_risk_blastemal",     "label": "High risk — viable tumor >33% with blastemal histology >66%", "snomed": "", "icd": "" },
+            { "id": "intermediate_focal_anaplasia", "label": "Intermediate risk with focal anaplasia (not blastemal predominant)", "snomed": "", "icd": "" },
+            { "id": "high_risk_diffuse_anaplasia",  "label": "High risk with diffuse anaplasia", "snomed": "", "icd": "" },
+            { "id": "cannot_determine",        "label": "Cannot be determined", "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status",
+          "label": "Margin Status",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "all_negative",   "label": "All margins negative for viable and non-viable tumor", "snomed": "", "icd": "" },
+            { "id": "tumor_present",  "label": "Tumor (viable or non-viable) present at margin",      "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable",                                       "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "closest_margin",
+          "label": "Closest Margin(s) to Tumor (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "", "icd": "",
+          "visibleWhen": { "fieldId": "margin_status", "answerId": "all_negative" },
+          "options": [
+            { "id": "vascular",           "label": "Vascular (specify)",              "snomed": "", "icd": "" },
+            { "id": "ureteral",           "label": "Ureteral (specify)",              "snomed": "", "icd": "" },
+            { "id": "perinephric",        "label": "Perinephric soft tissue (specify)","snomed": "", "icd": "" },
+            { "id": "other",              "label": "Other (specify)",                 "snomed": "", "icd": "" },
+            { "id": "cannot_determine",   "label": "Cannot be determined (explain)",  "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "distance_to_closest_margin_cm",
+          "label": "Distance from Tumor to Closest Margin (cm)",
+          "type": "numeric",
+          "required": false,
+          "snomed": "", "icd": "", "options": []
+        },
+        {
+          "id": "margins_involved",
+          "label": "Margin(s) Involved by Viable or Non-Viable Tumor (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "snomed": "", "icd": "",
+          "visibleWhen": { "fieldId": "margin_status", "answerId": "tumor_present" },
+          "options": [
+            { "id": "vascular_viable",     "label": "Vascular — viable",               "snomed": "", "icd": "" },
+            { "id": "vascular_nonviable",  "label": "Vascular — non-viable only",      "snomed": "", "icd": "" },
+            { "id": "ureteral_viable",     "label": "Ureteral — viable",               "snomed": "", "icd": "" },
+            { "id": "ureteral_nonviable",  "label": "Ureteral — non-viable only",      "snomed": "", "icd": "" },
+            { "id": "perinephric_viable",  "label": "Perinephric soft tissue — viable","snomed": "", "icd": "" },
+            { "id": "perinephric_nonviable","label":"Perinephric soft tissue — non-viable only","snomed": "", "icd": "" },
+            { "id": "other",               "label": "Other (specify)",                 "snomed": "", "icd": "" },
+            { "id": "cannot_determine",    "label": "Cannot be determined (explain)",  "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regional_lymph_nodes",
+      "title": "Regional Lymph Nodes",
+      "fields": [
+        {
+          "id": "ln_status",
+          "label": "Regional (abdominopelvic) Lymph Node Status",
+          "type": "dropdown",
+          "required": true,
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_applicable",  "label": "Not applicable (no regional lymph nodes submitted or found)",        "snomed": "", "icd": "" },
+            { "id": "all_negative",    "label": "All regional lymph nodes negative for viable and non-viable tumor",  "snomed": "", "icd": "" },
+            { "id": "tumor_present",   "label": "Tumor (viable or non-viable) present in regional lymph node(s)",    "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "ln_number_positive",
+          "label": "Number of Lymph Nodes with Tumor",
+          "type": "numeric",
+          "required": false,
+          "snomed": "", "icd": "", "options": [],
+          "visibleWhen": { "fieldId": "ln_status", "answerId": "tumor_present" }
+        },
+        {
+          "id": "ln_number_examined",
+          "label": "Number of Lymph Nodes Examined",
+          "type": "numeric",
+          "required": true,
+          "snomed": "", "icd": "", "options": []
+        }
+      ]
+    },
+    {
+      "id": "distant_metastasis",
+      "title": "Distant Metastasis",
+      "fields": [
+        {
+          "id": "distant_metastasis",
+          "label": "Distant Site(s) Involved by Viable or Non-Viable Tumor (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "Includes hematogenous metastasis to any location or LN metastasis outside abdominopelvic region",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_applicable",    "label": "Not applicable",                                              "snomed": "", "icd": "" },
+            { "id": "ln_outside_abdomen","label": "Lymph node(s) outside of the abdominopelvic region (specify)","snomed": "", "icd": "" },
+            { "id": "lung",              "label": "Lung (specify)",                                              "snomed": "", "icd": "" },
+            { "id": "liver",             "label": "Liver (specify)",                                             "snomed": "", "icd": "" },
+            { "id": "other",             "label": "Other (specify)",                                             "snomed": "", "icd": "" },
+            { "id": "cannot_determine",  "label": "Cannot be determined",                                        "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pathologic_stage",
+      "title": "Pathologic Stage",
+      "fields": [
+        {
+          "id": "staging_system",
+          "label": "Staging System",
+          "type": "dropdown",
+          "required": true,
+          "note": "Complete either COG or SIOP based on treatment protocols at your institution",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "cog",  "label": "COG (Children's Oncology Group)",                           "snomed": "", "icd": "" },
+            { "id": "siop", "label": "SIOP (International Society of Pediatric Oncology)",        "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "cog_stage",
+          "label": "COG Local Stage",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "", "icd": "",
+          "visibleWhen": { "fieldId": "staging_system", "answerId": "cog" },
+          "options": [
+            { "id": "not_applicable", "label": "Not applicable (nephrogenic rests only)",                                "snomed": "", "icd": "" },
+            { "id": "stage_i",        "label": "Local Stage I — tumor limited to kidney and completely resected",        "snomed": "", "icd": "" },
+            { "id": "stage_ii",       "label": "Local Stage II — tumor extends beyond kidney but completely resected, negative margins and nodes", "snomed": "", "icd": "" },
+            { "id": "stage_iii",      "label": "Local Stage III — residual tumor suspected",                            "snomed": "", "icd": "" },
+            { "id": "stage_iv",       "label": "Stage IV — metastatic disease",                                         "snomed": "", "icd": "" },
+            { "id": "stage_v",        "label": "Stage V — bilateral renal involvement at diagnosis",                    "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "siop_stage",
+          "label": "SIOP Stage",
+          "type": "dropdown",
+          "required": false,
+          "snomed": "", "icd": "",
+          "visibleWhen": { "fieldId": "staging_system", "answerId": "siop" },
+          "options": [
+            { "id": "stage_i",   "label": "Stage I — tumor limited to kidney and completely resected",                  "snomed": "", "icd": "" },
+            { "id": "stage_ii",  "label": "Stage II — tumor infiltrates locally but completely excised, negative margins and nodes", "snomed": "", "icd": "" },
+            { "id": "stage_iii", "label": "Stage III — residual disease intraabdominally",                              "snomed": "", "icd": "" },
+            { "id": "stage_iv",  "label": "Stage IV — distant metastases",                                              "snomed": "", "icd": "" },
+            { "id": "stage_v",   "label": "Stage V — bilateral renal involvement at diagnosis",                         "snomed": "", "icd": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "special_studies",
+      "title": "Special Studies",
+      "fields": [
+        {
+          "id": "ihc",
+          "label": "Relevant Immunohistochemistry",
+          "type": "dropdown",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "not_performed",    "label": "Not performed",        "snomed": "", "icd": "" },
+            { "id": "specify_findings", "label": "Specify findings",     "snomed": "", "icd": "" },
+            { "id": "pending",          "label": "Pending",              "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "ancillary_studies",
+          "label": "Ancillary Studies (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "note": "Optional (+)",
+          "snomed": "", "icd": "",
+          "options": [
+            { "id": "microarray", "label": "Microarray (specify findings / pending)", "snomed": "", "icd": "" },
+            { "id": "fish",       "label": "FISH (specify probe and findings / pending)", "snomed": "", "icd": "" },
+            { "id": "ngs",        "label": "Next generation sequencing / NGS (specify findings / pending)", "snomed": "", "icd": "" },
+            { "id": "other",      "label": "Other (specify)", "snomed": "", "icd": "" }
+          ]
+        },
+        {
+          "id": "comments",
+          "label": "Comments",
+          "type": "longtext",
+          "required": false,
+          "snomed": "", "icd": "", "options": []
+        }
+      ]
+    }
+  ]
+}

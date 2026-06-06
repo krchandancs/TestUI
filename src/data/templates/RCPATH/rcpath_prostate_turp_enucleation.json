@@ -1,0 +1,379 @@
+{
+  "id": "rcpath_prostate_turp_enucleation",
+  "name": "Reporting Proforma for Transurethral Resections or Enucleations of the Prostate",
+  "source": "RCPath",
+  "version": "current",
+  "sourceDocument": "Appendix E",
+  "category": "PROSTATE",
+  "locale": "en-GB",
+  "sections": [
+    {
+      "id": "clinical_information",
+      "title": "Clinical Information",
+      "fields": [
+        {
+          "id": "pre_biopsy_psa",
+          "label": "Pre-biopsy PSA (ng/mL)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Numerical value in ng/mL"
+        },
+        {
+          "id": "pre_biopsy_psa_availability",
+          "label": "Pre-biopsy PSA Availability",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "psa_not_available",  "label": "Not available",  "snomed": "", "icd": "" },
+            { "id": "psa_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "Only applicable if no value given for Pre-biopsy PSA"
+        }
+      ]
+    },
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "specimen_type",
+          "label": "Type of Specimen",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "turp",       "label": "TURP",       "snomed": "", "icd": "" },
+            { "id": "enucleation","label": "Enucleation","snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tumour_pathology",
+      "title": "Tumour Pathology",
+      "fields": [
+        {
+          "id": "histological_tumour_type",
+          "label": "Histological Tumour Type",
+          "type": "checkboxes",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "acinar_adenocarcinoma",           "label": "Acinar adenocarcinoma",              "snomed": "", "icd": "" },
+            { "id": "prostatic_ductal_adenocarcinoma",  "label": "Prostatic ductal adenocarcinoma",    "snomed": "", "icd": "" },
+            { "id": "small_cell_neuroendocrine",        "label": "Small cell neuroendocrine carcinoma","snomed": "", "icd": "" },
+            { "id": "tumour_type_other",                "label": "Other",                             "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "histological_tumour_type_other_specify",
+          "label": "Histological Tumour Type — Other (specify)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Only applicable if 'Other' selected"
+        },
+        {
+          "id": "percentage_tissue_involved_by_area",
+          "label": "Percentage of Prostate Tissue Involved — Based on Area (%)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Numerical value 0–100"
+        },
+        {
+          "id": "percentage_tissue_involved_by_area_availability",
+          "label": "Percentage by Area — Availability",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "area_not_used",        "label": "Not used",        "snomed": "", "icd": "" },
+            { "id": "area_not_applicable",  "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": "Only applicable if percentage by area not completed"
+        },
+        {
+          "id": "percentage_tissue_involved_by_chips",
+          "label": "Percentage of Prostate Tissue Involved — Based on Number of Chips (%)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Numerical value 0–100"
+        },
+        {
+          "id": "percentage_tissue_involved_by_chips_availability",
+          "label": "Percentage by Chips — Availability",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "chips_not_used",       "label": "Not used",        "snomed": "", "icd": "" },
+            { "id": "chips_not_applicable", "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": "Only applicable if percentage by chips not completed"
+        }
+      ]
+    },
+    {
+      "id": "grading",
+      "title": "Gleason Score and Grade Group",
+      "fields": [
+        {
+          "id": "gleason_applicable",
+          "label": "Gleason Score Applicable",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gleason_applicable",     "label": "Applicable",     "snomed": "", "icd": "" },
+            { "id": "gleason_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "primary_gleason_grade",
+          "label": "Primary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15210",
+          "icd": "",
+          "options": [
+            { "id": "primary_2",             "label": "2",              "snomed": "", "icd": "" },
+            { "id": "primary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "primary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "primary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "primary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15210. Grades 2 and 3 are rare in TURP/enucleation."
+        },
+        {
+          "id": "secondary_gleason_grade",
+          "label": "Secondary Gleason Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "pUR15220",
+          "icd": "",
+          "options": [
+            { "id": "secondary_2",             "label": "2",              "snomed": "", "icd": "" },
+            { "id": "secondary_3",             "label": "3",              "snomed": "", "icd": "" },
+            { "id": "secondary_4",             "label": "4",              "snomed": "", "icd": "" },
+            { "id": "secondary_5",             "label": "5",              "snomed": "", "icd": "" },
+            { "id": "secondary_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pUR15220"
+        },
+        {
+          "id": "gleason_score_total",
+          "label": "Gleason Score — Total",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gleason_4",              "label": "4",              "snomed": "", "icd": "" },
+            { "id": "gleason_5",              "label": "5",              "snomed": "", "icd": "" },
+            { "id": "gleason_6",              "label": "6",              "snomed": "", "icd": "" },
+            { "id": "gleason_7",              "label": "7",              "snomed": "", "icd": "" },
+            { "id": "gleason_8",              "label": "8",              "snomed": "", "icd": "" },
+            { "id": "gleason_9",              "label": "9",              "snomed": "", "icd": "" },
+            { "id": "gleason_10",             "label": "10",             "snomed": "", "icd": "" },
+            { "id": "gleason_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "grade_group",
+          "label": "Grade Group",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "gg_1",              "label": "1",              "snomed": "", "icd": "" },
+            { "id": "gg_2",              "label": "2",              "snomed": "", "icd": "" },
+            { "id": "gg_3",              "label": "3",              "snomed": "", "icd": "" },
+            { "id": "gg_4",              "label": "4",              "snomed": "", "icd": "" },
+            { "id": "gg_5",              "label": "5",              "snomed": "", "icd": "" },
+            { "id": "gg_not_applicable", "label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "percentage_gleason_pattern_4",
+          "label": "Percentage Gleason Pattern 4",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pattern4_lt5",           "label": "<5%",           "snomed": "", "icd": "" },
+            { "id": "pattern4_5_lt10",        "label": "5–<10%",        "snomed": "", "icd": "" },
+            { "id": "pattern4_10_lt20",       "label": "10–<20%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_20_lt30",       "label": "20–<30%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_30_lt40",       "label": "30–<40%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_40_lt50",       "label": "40–<50%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_50_lt60",       "label": "50–<60%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_60_lt70",       "label": "60–<70%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_70_lt80",       "label": "70–<80%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_80_lt90",       "label": "80–<90%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_90_100",        "label": "90–100%",       "snomed": "", "icd": "" },
+            { "id": "pattern4_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "invasive_cribriform_intraductal",
+          "label": "Invasive Cribriform and/or Intraductal Carcinoma",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "cribriform_not_present", "label": "Not present", "snomed": "", "icd": "" },
+            { "id": "cribriform_present",     "label": "Present",     "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "tnm_stage",
+      "title": "TNM Stage",
+      "fields": [
+        {
+          "id": "t_category",
+          "label": "T Category",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "pCR0910",
+          "icd": "",
+          "options": [
+            { "id": "T1a", "label": "T1a", "snomed": "", "icd": "" },
+            { "id": "T1b", "label": "T1b", "snomed": "", "icd": "" },
+            { "id": "T3a", "label": "T3a", "snomed": "", "icd": "" }
+          ],
+          "note": "COSD: pCR0910"
+        }
+      ]
+    },
+    {
+      "id": "molecular_block",
+      "title": "Representative Block for Molecular Studies",
+      "fields": [
+        {
+          "id": "representative_molecular_block",
+          "label": "Representative Block for Molecular Studies",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Block identifier"
+        },
+        {
+          "id": "molecular_block_tumour_content",
+          "label": "Tumour Content of Molecular Block",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "content_0_20",         "label": "0–20%",          "snomed": "", "icd": "" },
+            { "id": "content_20_30",        "label": "20–30%",         "snomed": "", "icd": "" },
+            { "id": "content_31_40",        "label": "31–40%",         "snomed": "", "icd": "" },
+            { "id": "content_41_50",        "label": "41–50%",         "snomed": "", "icd": "" },
+            { "id": "content_51_60",        "label": "51–60%",         "snomed": "", "icd": "" },
+            { "id": "content_61_70",        "label": "61–70%",         "snomed": "", "icd": "" },
+            { "id": "content_71_80",        "label": "71–80%",         "snomed": "", "icd": "" },
+            { "id": "content_91_100",       "label": "91–100%",        "snomed": "", "icd": "" },
+            { "id": "content_not_applicable","label": "Not applicable", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "snomed_codes",
+      "title": "SNOMED Codes",
+      "fields": [
+        {
+          "id": "snomed_t_code",
+          "label": "SNOMED Topography Code",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "pCR6410",
+          "icd": "",
+          "options": [],
+          "note": "May have multiple codes. COSD: pCR6410"
+        },
+        {
+          "id": "snomed_m_code",
+          "label": "SNOMED Morphology Code",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "pCR6420",
+          "icd": "",
+          "options": [],
+          "note": "May have multiple codes. COSD: pCR6420"
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "id": "rcpath_colorectal_local_excision",
+  "name": "Reporting Proforma for Colorectal Carcinoma Local Excision Specimens",
+  "source": "RCPath",
+  "version": "current",
+  "sourceDocument": "Appendix D",
+  "category": "COLORECTAL",
+  "locale": "en-GB",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "specimen_type",
+          "label": "Specimen Type",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "polypectomy",  "label": "Polypectomy",                                        "snomed": "", "icd": "" },
+            { "id": "emr",         "label": "Endoscopic mucosal resection (EMR)",                  "snomed": "", "icd": "" },
+            { "id": "esd",         "label": "Endoscopic submucosal dissection (ESD)",              "snomed": "", "icd": "" },
+            { "id": "tems",        "label": "Transanal endoscopic microsurgery (TEMS) excision",   "snomed": "", "icd": "" },
+            { "id": "tamis",       "label": "Transanal minimally invasive surgery (TAMIS) excision","snomed": "", "icd": "" },
+            { "id": "eftr",        "label": "Endoscopic full thickness resection (EFTR)",          "snomed": "", "icd": "" },
+            { "id": "local_excision_other", "label": "Other",                                     "snomed": "", "icd": "" }
+          ],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "tumour_site",
+          "label": "Site of Tumour",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "caecum",            "label": "Caecum",                     "snomed": "", "icd": "" },
+            { "id": "ascending_colon",   "label": "Ascending colon",            "snomed": "", "icd": "" },
+            { "id": "hepatic_flexure",   "label": "Hepatic flexure",            "snomed": "", "icd": "" },
+            { "id": "transverse_colon",  "label": "Transverse colon",           "snomed": "", "icd": "" },
+            { "id": "splenic_flexure",   "label": "Splenic flexure",            "snomed": "", "icd": "" },
+            { "id": "descending_colon",  "label": "Descending colon",           "snomed": "", "icd": "" },
+            { "id": "sigmoid",           "label": "Sigmoid",                    "snomed": "", "icd": "" },
+            { "id": "rectosigmoid",      "label": "Rectosigmoid",               "snomed": "", "icd": "" },
+            { "id": "rectum",            "label": "Rectum",                     "snomed": "", "icd": "" },
+            { "id": "site_unknown",      "label": "Unknown",                    "snomed": "", "icd": "" },
+            { "id": "tumour_not_identified","label": "Tumour not identified",   "snomed": "", "icd": "" },
+            { "id": "site_other",        "label": "Other",                      "snomed": "", "icd": "" }
+          ],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "specimen_size_max_width_mm",
+          "label": "Size of Specimen — Maximum Width (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Enter 'Not assessable (piecemeal)' if applicable"
+        },
+        {
+          "id": "maximum_tumour_diameter_mm",
+          "label": "Maximum Tumour Diameter (mm)",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Enter value in mm, or 'Not identified'. COSD v7 data item."
+        }
+      ]
+    },
+    {
+      "id": "tumour_pathology",
+      "title": "Tumour Pathology",
+      "fields": [
+        {
+          "id": "tumour_type",
+          "label": "Tumour Type",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "adenocarcinoma",         "label": "Adenocarcinoma",                   "snomed": "", "icd": "" },
+            { "id": "adenocarcinoma_variant",  "label": "Other / adenocarcinoma variant",  "snomed": "", "icd": "" }
+          ],
+          "note": "If variant, specify in comments. COSD v7 data item."
+        },
+        {
+          "id": "differentiation",
+          "label": "Differentiation by Worst Area",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "well_moderate",  "label": "Well / moderate", "snomed": "", "icd": "" },
+            { "id": "poor",           "label": "Poor",            "snomed": "", "icd": "" },
+            { "id": "not_applicable", "label": "Not applicable",  "snomed": "", "icd": "" }
+          ],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "local_invasion",
+          "label": "Local Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "pT0", "label": "No carcinoma identified (pT0)", "snomed": "", "icd": "" },
+            { "id": "pT1", "label": "Submucosa (pT1)",               "snomed": "", "icd": "" },
+            { "id": "pT2", "label": "Muscularis propria (pT2)",      "snomed": "", "icd": "" },
+            { "id": "pT3", "label": "Beyond muscularis propria (pT3)","snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "pt1_max_depth_from_muscularis_mucosae_mm",
+          "label": "pT1 — Maximum Depth of Invasive Tumour from Muscularis Mucosae (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "For pT1 tumours only. Enter 'Not assessable' if applicable."
+        },
+        {
+          "id": "pt1_width_of_invasive_tumour_mm",
+          "label": "pT1 — Width of Invasive Tumour (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "For pT1 tumours only. Enter 'Not assessable' if applicable."
+        },
+        {
+          "id": "haggitt_level",
+          "label": "Haggitt Level (polypoid tumours only)",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "haggitt_1",           "label": "Level 1",       "snomed": "", "icd": "" },
+            { "id": "haggitt_2",           "label": "Level 2",       "snomed": "", "icd": "" },
+            { "id": "haggitt_3",           "label": "Level 3",       "snomed": "", "icd": "" },
+            { "id": "haggitt_4",           "label": "Level 4",       "snomed": "", "icd": "" },
+            { "id": "haggitt_na",          "label": "Not applicable","snomed": "", "icd": "" },
+            { "id": "haggitt_not_assessable","label": "Not assessable","snomed": "", "icd": "" }
+          ],
+          "note": "For polypoid tumours only"
+        },
+        {
+          "id": "kikuchi_level",
+          "label": "Kikuchi Level (sessile tumours only)",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "kikuchi_sm1",          "label": "sm1",          "snomed": "", "icd": "" },
+            { "id": "kikuchi_sm2",          "label": "sm2",          "snomed": "", "icd": "" },
+            { "id": "kikuchi_sm3",          "label": "sm3",          "snomed": "", "icd": "" },
+            { "id": "kikuchi_na",           "label": "Not applicable","snomed": "", "icd": "" },
+            { "id": "kikuchi_not_assessable","label": "Not assessable","snomed": "", "icd": "" }
+          ],
+          "note": "For sessile tumours only"
+        }
+      ]
+    },
+    {
+      "id": "lymph_nodes",
+      "title": "Lymph Nodes and Tumour Deposits",
+      "fields": [
+        {
+          "id": "total_lymph_nodes_examined",
+          "label": "Number of Lymph Nodes Examined",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "total_lymph_nodes_involved",
+          "label": "Number of Involved Lymph Nodes",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "number_of_tumour_deposits",
+          "label": "Number of Tumour Deposits",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "deposits_0",   "label": "0",  "snomed": "", "icd": "" },
+            { "id": "deposits_1",   "label": "1",  "snomed": "", "icd": "" },
+            { "id": "deposits_2",   "label": "2",  "snomed": "", "icd": "" },
+            { "id": "deposits_3",   "label": "3",  "snomed": "", "icd": "" },
+            { "id": "deposits_4",   "label": "4",  "snomed": "", "icd": "" },
+            { "id": "deposits_5",   "label": "5",  "snomed": "", "icd": "" },
+            { "id": "deposits_gt5", "label": ">5", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "vascular_invasion",
+      "title": "Vascular, Lymphatic and Perineural Invasion",
+      "fields": [
+        {
+          "id": "venous_invasion",
+          "label": "Deepest Level of Venous Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "venous_none",       "label": "None",       "snomed": "", "icd": "" },
+            { "id": "venous_intramural", "label": "Intramural", "snomed": "", "icd": "" },
+            { "id": "venous_extramural", "label": "Extramural", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "lymphatic_invasion",
+          "label": "Deepest Level of Lymphatic (Small Vessel) Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "lymphatic_none",       "label": "None",       "snomed": "", "icd": "" },
+            { "id": "lymphatic_intramural", "label": "Intramural", "snomed": "", "icd": "" },
+            { "id": "lymphatic_extramural", "label": "Extramural", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "perineural_invasion",
+          "label": "Deepest Level of Perineural Invasion",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "perineural_none",       "label": "None",       "snomed": "", "icd": "" },
+            { "id": "perineural_intramural", "label": "Intramural", "snomed": "", "icd": "" },
+            { "id": "perineural_extramural", "label": "Extramural", "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        },
+        {
+          "id": "tumour_budding_number_of_buds",
+          "label": "Tumour Budding — Number of Buds",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Buds counted on H&E within 0.785mm² hotspot"
+        },
+        {
+          "id": "tumour_budding_grade",
+          "label": "Tumour Budding Grade",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "bd1", "label": "Bd1 (<5 buds)",  "snomed": "", "icd": "" },
+            { "id": "bd2", "label": "Bd2 (5–9 buds)", "snomed": "", "icd": "" },
+            { "id": "bd3", "label": "Bd3 (>9 buds)",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "therapy_response",
+      "title": "Preoperative Therapy Response",
+      "fields": [
+        {
+          "id": "tumour_regression_score",
+          "label": "Preoperative Therapy Response (Tumour Regression Score)",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "trs_na", "label": "Not applicable",                                           "snomed": "", "icd": "" },
+            { "id": "trs_0",  "label": "TRS 0 — No viable cancer cells",                           "snomed": "", "icd": "" },
+            { "id": "trs_1",  "label": "TRS 1 — Single cells or rare small groups of cancer cells","snomed": "", "icd": "" },
+            { "id": "trs_2",  "label": "TRS 2 — Residual cancer with evident tumour regression",   "snomed": "", "icd": "" },
+            { "id": "trs_3",  "label": "TRS 3 — No evident tumour regression",                    "snomed": "", "icd": "" }
+          ],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "background_adenoma",
+          "label": "Background Adenoma",
+          "type": "dropdown",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "adenoma_yes", "label": "Yes", "snomed": "", "icd": "" },
+            { "id": "adenoma_no",  "label": "No",  "snomed": "", "icd": "" }
+          ],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Involvement of Margins by Carcinoma",
+      "fields": [
+        {
+          "id": "peripheral_margin_involvement",
+          "label": "Peripheral Margin Involvement",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "peripheral_yes",           "label": "Yes",           "snomed": "", "icd": "" },
+            { "id": "peripheral_no",            "label": "No",            "snomed": "", "icd": "" },
+            { "id": "peripheral_not_assessable","label": "Not assessable","snomed": "", "icd": "" }
+          ],
+          "note": "Not assessable if specimen received piecemeal. COSD v7 data item."
+        },
+        {
+          "id": "deep_margin_involvement",
+          "label": "Deep Margin Involvement",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "deep_yes",           "label": "Yes",           "snomed": "", "icd": "" },
+            { "id": "deep_no",            "label": "No",            "snomed": "", "icd": "" },
+            { "id": "deep_not_assessable","label": "Not assessable","snomed": "", "icd": "" }
+          ],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "distance_to_deep_margin_mm",
+          "label": "Histological Measurement from Carcinoma to Nearest Deep Excision Margin (mm)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Enter 'Not assessable' if applicable"
+        },
+        {
+          "id": "resection_status",
+          "label": "Resection Status",
+          "type": "dropdown",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [
+            { "id": "r0",             "label": "Yes — R0 (complete resection)",  "snomed": "", "icd": "" },
+            { "id": "r1",             "label": "No — R1 (microscopic residual)", "snomed": "", "icd": "" },
+            { "id": "r2",             "label": "No — R2 (macroscopic residual)", "snomed": "", "icd": "" },
+            { "id": "not_assessable", "label": "Not assessable",                 "snomed": "", "icd": "" }
+          ],
+          "note": "COSD v7 data item"
+        }
+      ]
+    },
+    {
+      "id": "tnm_stage",
+      "title": "TNM Stage",
+      "fields": [
+        {
+          "id": "t_stage",
+          "label": "TNM (8th Edition) — (y)pT",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Add 'y' prefix for post-neoadjuvant therapy cases. COSD v7 data item."
+        },
+        {
+          "id": "n_stage",
+          "label": "TNM (8th Edition) — (y)pN",
+          "type": "text",
+          "required": true,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "m_stage",
+          "label": "TNM (8th Edition) — (y)pM",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "COSD v7 data item"
+        }
+      ]
+    },
+    {
+      "id": "molecular_block",
+      "title": "Block Index and Molecular Information",
+      "fields": [
+        {
+          "id": "block_index",
+          "label": "Block Index",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "e.g. A=..., B=..."
+        },
+        {
+          "id": "representative_molecular_block",
+          "label": "Representative Molecular Block(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        },
+        {
+          "id": "carcinoma_content_percent",
+          "label": "Carcinoma Content (% by cellularity, to nearest 10%)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "snomed_codes",
+      "title": "SNOMED Codes",
+      "fields": [
+        {
+          "id": "snomed_t_code",
+          "label": "SNOMED T Code (Topography)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "COSD v7 data item"
+        },
+        {
+          "id": "snomed_m_code",
+          "label": "SNOMED M Code (Morphology)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "COSD v7 data item"
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": false,
+          "core": true,
+          "snomed": "",
+          "icd": "",
+          "options": [],
+          "note": "Include tumour type variant detail, specimen comments, etc."
+        }
+      ]
+    }
+  ]
+}

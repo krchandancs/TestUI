@@ -1,0 +1,818 @@
+{
+  "id": "lung_resection",
+  "name": "CAP Lung \u2014 Resection",
+  "source": "CAP",
+  "version": "5.1.0.0",
+  "category": "LUNG",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "synchronous_tumors",
+          "label": "Synchronous Tumors",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "sync_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "sync_present",
+              "label": "Present"
+            },
+            {
+              "id": "sync_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "procedure",
+          "label": "Procedure (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "wedge_resection",
+              "label": "Wedge resection"
+            },
+            {
+              "id": "segmentectomy",
+              "label": "Segmentectomy"
+            },
+            {
+              "id": "lobectomy",
+              "label": "Lobectomy"
+            },
+            {
+              "id": "completion_lobectomy",
+              "label": "Completion lobectomy"
+            },
+            {
+              "id": "sleeve_lobectomy",
+              "label": "Sleeve lobectomy"
+            },
+            {
+              "id": "bilobectomy",
+              "label": "Bilobectomy"
+            },
+            {
+              "id": "pneumonectomy",
+              "label": "Pneumonectomy"
+            },
+            {
+              "id": "major_airway_resection",
+              "label": "Major airway resection (specify)"
+            },
+            {
+              "id": "adjacent_structures",
+              "label": "Adjacent structures (specify)"
+            },
+            {
+              "id": "procedure_other",
+              "label": "Other (specify)"
+            },
+            {
+              "id": "procedure_not_specified",
+              "label": "Not specified"
+            }
+          ]
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "right",
+              "label": "Right"
+            },
+            {
+              "id": "left",
+              "label": "Left"
+            },
+            {
+              "id": "laterality_not_specified",
+              "label": "Not specified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "tumor_focality",
+          "label": "Tumor Focality",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "single_focus",
+              "label": "Single focus"
+            },
+            {
+              "id": "same_lobe_mets",
+              "label": "Separate tumor nodules (metastases) in same lobe (pT3)"
+            },
+            {
+              "id": "ipsilateral_lobe_mets",
+              "label": "Separate tumor nodules (metastases) in different ipsilateral lobe (pT4)"
+            },
+            {
+              "id": "contralateral_lobe_mets",
+              "label": "Separate tumor nodules (metastases) in contralateral lobe (pM1a)"
+            },
+            {
+              "id": "multifocal_similar",
+              "label": "Multifocal tumor nodules of similar histology (use m suffix)"
+            },
+            {
+              "id": "pneumonic_type",
+              "label": "Pneumonic-type adenocarcinoma"
+            },
+            {
+              "id": "focality_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "tumor_site",
+          "label": "Tumor Site (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "upper_lobe",
+              "label": "Upper lobe of lung"
+            },
+            {
+              "id": "middle_lobe",
+              "label": "Middle lobe of lung"
+            },
+            {
+              "id": "lower_lobe",
+              "label": "Lower lobe of lung"
+            },
+            {
+              "id": "bronchus_main",
+              "label": "Bronchus, main"
+            },
+            {
+              "id": "bronchus_intermedius",
+              "label": "Bronchus intermedius"
+            },
+            {
+              "id": "bronchus_lobar",
+              "label": "Bronchus, lobar (specify)"
+            },
+            {
+              "id": "tumor_site_other",
+              "label": "Other (specify)"
+            },
+            {
+              "id": "tumor_site_not_specified",
+              "label": "Not specified"
+            }
+          ]
+        },
+        {
+          "id": "tumor_size_invasive_cm",
+          "label": "Invasive Tumor Size \u2014 Greatest Dimension (cm)",
+          "type": "text",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "ais_nonmucinous",
+              "label": "Adenocarcinoma in situ (AIS), non-mucinous"
+            },
+            {
+              "id": "ais_mucinous",
+              "label": "Adenocarcinoma in situ (AIS), mucinous"
+            },
+            {
+              "id": "mia_nonmucinous",
+              "label": "Minimally invasive adenocarcinoma, non-mucinous"
+            },
+            {
+              "id": "mia_mucinous",
+              "label": "Minimally invasive adenocarcinoma, mucinous"
+            },
+            {
+              "id": "inv_lepidic",
+              "label": "Invasive lepidic adenocarcinoma"
+            },
+            {
+              "id": "inv_acinar",
+              "label": "Invasive acinar adenocarcinoma"
+            },
+            {
+              "id": "inv_papillary",
+              "label": "Invasive papillary adenocarcinoma"
+            },
+            {
+              "id": "inv_micropapillary",
+              "label": "Invasive micropapillary adenocarcinoma"
+            },
+            {
+              "id": "inv_solid",
+              "label": "Invasive solid adenocarcinoma"
+            },
+            {
+              "id": "inv_mucinous",
+              "label": "Invasive mucinous adenocarcinoma"
+            },
+            {
+              "id": "mixed_mucinous_nonmucinous",
+              "label": "Mixed invasive mucinous and non-mucinous adenocarcinoma"
+            },
+            {
+              "id": "colloid",
+              "label": "Colloid adenocarcinoma"
+            },
+            {
+              "id": "fetal",
+              "label": "Fetal adenocarcinoma"
+            },
+            {
+              "id": "enteric_type",
+              "label": "Enteric-type adenocarcinoma"
+            },
+            {
+              "id": "scis",
+              "label": "Squamous cell carcinoma in situ (SCIS)"
+            },
+            {
+              "id": "sq_keratinizing",
+              "label": "Invasive squamous cell carcinoma, keratinizing"
+            },
+            {
+              "id": "sq_nonkeratinizing",
+              "label": "Invasive squamous cell carcinoma, non-keratinizing"
+            },
+            {
+              "id": "sq_basaloid",
+              "label": "Invasive squamous cell carcinoma, basaloid"
+            },
+            {
+              "id": "lymphoepithelial",
+              "label": "Lymphoepithelial carcinoma"
+            },
+            {
+              "id": "large_cell",
+              "label": "Large cell carcinoma"
+            },
+            {
+              "id": "adenosquamous",
+              "label": "Adenosquamous carcinoma"
+            },
+            {
+              "id": "pleomorphic",
+              "label": "Pleomorphic carcinoma"
+            },
+            {
+              "id": "pulmonary_blastoma",
+              "label": "Pulmonary blastoma"
+            },
+            {
+              "id": "carcinosarcoma",
+              "label": "Carcinosarcoma"
+            },
+            {
+              "id": "nut_carcinoma",
+              "label": "NUT carcinoma"
+            },
+            {
+              "id": "smarca4_deficient",
+              "label": "Thoracic SMARCA4-deficient undifferentiated tumor"
+            },
+            {
+              "id": "adenoid_cystic",
+              "label": "Adenoid cystic carcinoma"
+            },
+            {
+              "id": "mucoepidermoid",
+              "label": "Mucoepidermoid carcinoma"
+            },
+            {
+              "id": "typical_carcinoid",
+              "label": "Typical carcinoid / Neuroendocrine tumor, grade 1"
+            },
+            {
+              "id": "atypical_carcinoid",
+              "label": "Atypical carcinoid / Neuroendocrine tumor, grade 2"
+            },
+            {
+              "id": "carcinoid_nos",
+              "label": "Carcinoid tumor, NOS / Neuroendocrine tumor, NOS"
+            },
+            {
+              "id": "small_cell",
+              "label": "Small cell carcinoma"
+            },
+            {
+              "id": "combined_small_cell",
+              "label": "Combined small cell carcinoma"
+            },
+            {
+              "id": "large_cell_ne",
+              "label": "Large cell neuroendocrine carcinoma"
+            },
+            {
+              "id": "combined_lcnec",
+              "label": "Combined large cell neuroendocrine carcinoma"
+            },
+            {
+              "id": "type_cannot_determine",
+              "label": "Carcinoma, type cannot be determined"
+            },
+            {
+              "id": "nsclc_subtype_cannot_determine",
+              "label": "Non-small cell carcinoma, subtype cannot be determined"
+            },
+            {
+              "id": "histologic_other",
+              "label": "Other histologic type not listed (specify)"
+            },
+            {
+              "id": "no_viable_tumor",
+              "label": "No viable tumor present (explain)"
+            }
+          ]
+        },
+        {
+          "id": "histologic_grade",
+          "label": "+ Histologic Grade",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "g1",
+              "label": "G1, well-differentiated"
+            },
+            {
+              "id": "g2",
+              "label": "G2, moderately differentiated"
+            },
+            {
+              "id": "g3",
+              "label": "G3, poorly differentiated"
+            },
+            {
+              "id": "g4",
+              "label": "G4, undifferentiated"
+            },
+            {
+              "id": "grade_other",
+              "label": "Other (specify)"
+            },
+            {
+              "id": "gx",
+              "label": "GX, cannot be assessed"
+            },
+            {
+              "id": "grade_not_applicable",
+              "label": "Not applicable"
+            }
+          ]
+        },
+        {
+          "id": "stas",
+          "label": "Spread Through Air Spaces (STAS)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "stas_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "stas_present",
+              "label": "Present"
+            },
+            {
+              "id": "stas_cannot_determine",
+              "label": "Cannot be determined"
+            },
+            {
+              "id": "stas_not_applicable",
+              "label": "Not applicable"
+            }
+          ]
+        },
+        {
+          "id": "visceral_pleura_invasion",
+          "label": "Visceral Pleura Invasion",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "vpi_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "vpi_present",
+              "label": "Present"
+            },
+            {
+              "id": "vpi_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status_invasive",
+          "label": "Margin Status for Invasive Tumor",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "all_margins_negative_invasive",
+              "label": "All margins negative for invasive tumor"
+            },
+            {
+              "id": "invasive_tumor_at_margin",
+              "label": "Invasive tumor present at margin"
+            },
+            {
+              "id": "margin_cannot_determine",
+              "label": "Cannot be determined (explain)"
+            },
+            {
+              "id": "margin_not_applicable",
+              "label": "Not applicable"
+            }
+          ]
+        },
+        {
+          "id": "margin_status_noninvasive",
+          "label": "Margin Status for Non-Invasive Tumor (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "all_margins_negative_noninvasive",
+              "label": "All margins negative for non-invasive tumor"
+            },
+            {
+              "id": "cis_bronchial_margin",
+              "label": "Carcinoma in situ present at bronchial margin"
+            },
+            {
+              "id": "cis_parenchymal_margin",
+              "label": "Carcinoma in situ present at parenchymal margin"
+            },
+            {
+              "id": "lepidic_parenchymal_margin",
+              "label": "Lepidic component of invasive carcinoma present at parenchymal margin"
+            },
+            {
+              "id": "noninvasive_other",
+              "label": "Other (specify)"
+            },
+            {
+              "id": "noninvasive_cannot_determine",
+              "label": "Cannot be determined"
+            },
+            {
+              "id": "noninvasive_not_applicable",
+              "label": "Not applicable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lymph_nodes",
+      "title": "Regional Lymph Nodes",
+      "fields": [
+        {
+          "id": "prior_ln_sampling",
+          "label": "Lymph Node(s) from Prior Procedures",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "no_prior_ln_sampling",
+              "label": "No known prior lymph node sampling performed"
+            },
+            {
+              "id": "prior_ln_not_included",
+              "label": "Not included"
+            },
+            {
+              "id": "prior_ln_included",
+              "label": "Included"
+            }
+          ]
+        },
+        {
+          "id": "regional_ln_status",
+          "label": "Regional Lymph Node Status",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "ln_not_applicable",
+              "label": "Not applicable (no regional lymph nodes submitted or found)"
+            },
+            {
+              "id": "ln_present",
+              "label": "Regional lymph nodes present"
+            },
+            {
+              "id": "ln_all_negative",
+              "label": "All regional lymph nodes negative for tumor"
+            },
+            {
+              "id": "ln_tumor_present",
+              "label": "Tumor present in regional lymph node(s)"
+            }
+          ]
+        },
+        {
+          "id": "ln_number_positive",
+          "label": "Number of Lymph Nodes with Tumor",
+          "type": "numeric",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "regional_ln_status",
+            "answerId": "ln_tumor_present"
+          },
+          "options": []
+        },
+        {
+          "id": "ln_number_examined",
+          "label": "Number of Lymph Nodes Examined",
+          "type": "numeric",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "regional_ln_status",
+            "answerId": "ln_present"
+          },
+          "options": []
+        },
+        {
+          "id": "extranodal_extension",
+          "label": "+ Extranodal Extension",
+          "type": "dropdown",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "regional_ln_status",
+            "answerId": "ln_tumor_present"
+          },
+          "options": [
+            {
+              "id": "ene_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "ene_present",
+              "label": "Present"
+            },
+            {
+              "id": "ene_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staging",
+      "title": "pTNM Classification (AJCC Version 9)",
+      "fields": [
+        {
+          "id": "tnm_modifiers",
+          "label": "Modified Classification (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "tnm_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "tnm_y",
+              "label": "y (post-neoadjuvant therapy)"
+            },
+            {
+              "id": "tnm_r",
+              "label": "r (recurrence)"
+            }
+          ]
+        },
+        {
+          "id": "pT_category",
+          "label": "pT Category",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "pT_not_assigned",
+              "label": "pT not assigned (cannot be determined)"
+            },
+            {
+              "id": "pT0",
+              "label": "pT0: No evidence of primary tumor"
+            },
+            {
+              "id": "pTis",
+              "label": "pTis: Carcinoma in situ (AIS or SCIS)"
+            },
+            {
+              "id": "pT1mi",
+              "label": "pT1mi: Minimally invasive adenocarcinoma (\u22643 cm)"
+            },
+            {
+              "id": "pT1a",
+              "label": "pT1a: Tumor \u22641 cm"
+            },
+            {
+              "id": "pT1b",
+              "label": "pT1b: Tumor >1 cm and \u22642 cm"
+            },
+            {
+              "id": "pT1c",
+              "label": "pT1c: Tumor >2 cm and \u22643 cm"
+            },
+            {
+              "id": "pT1_subgroup_unknown",
+              "label": "pT1 (subgroup cannot be determined)"
+            },
+            {
+              "id": "pT2a",
+              "label": "pT2a: Tumor >3 cm and \u22644 cm"
+            },
+            {
+              "id": "pT2b",
+              "label": "pT2b: Tumor >4 cm and \u22645 cm"
+            },
+            {
+              "id": "pT2_subgroup_unknown",
+              "label": "pT2 (subgroup cannot be determined)"
+            },
+            {
+              "id": "pT3",
+              "label": "pT3: Tumor >5 cm and \u22647 cm"
+            },
+            {
+              "id": "pT4",
+              "label": "pT4: Tumor >7 cm or invading critical structures"
+            }
+          ]
+        },
+        {
+          "id": "pN_category",
+          "label": "pN Category",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "pN_not_assigned_no_nodes",
+              "label": "pN not assigned (no nodes submitted or found)"
+            },
+            {
+              "id": "pN_not_assigned_unknown",
+              "label": "pN not assigned (cannot be determined)"
+            },
+            {
+              "id": "pN0",
+              "label": "pN0: No tumor involvement of regional lymph node(s)"
+            },
+            {
+              "id": "pN1",
+              "label": "pN1: Ipsilateral peribronchial / hilar / intrapulmonary nodes"
+            },
+            {
+              "id": "pN2a",
+              "label": "pN2a: Single ipsilateral mediastinal or subcarinal nodal station"
+            },
+            {
+              "id": "pN2b",
+              "label": "pN2b: Multiple ipsilateral mediastinal nodal stations"
+            },
+            {
+              "id": "pN2_subgroup_unknown",
+              "label": "pN2 (subgroup cannot be determined)"
+            },
+            {
+              "id": "pN3",
+              "label": "pN3: Contralateral mediastinal / hilar / scalene / supraclavicular nodes"
+            }
+          ]
+        },
+        {
+          "id": "pM_category",
+          "label": "pM Category (required only if confirmed pathologically)",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "pM_not_applicable",
+              "label": "Not applicable - pM cannot be determined"
+            },
+            {
+              "id": "pM1a",
+              "label": "pM1a: Pleural/pericardial nodules or malignant effusion"
+            },
+            {
+              "id": "pM1b",
+              "label": "pM1b: Single extrathoracic metastasis in one organ system"
+            },
+            {
+              "id": "pM1c1",
+              "label": "pM1c1: Multiple extrathoracic metastases in one organ system"
+            },
+            {
+              "id": "pM1c2",
+              "label": "pM1c2: Multiple extrathoracic metastases in multiple organ systems"
+            },
+            {
+              "id": "pM1_subgroup_unknown",
+              "label": "pM1 (subgroup cannot be determined)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings",
+          "label": "+ Additional Findings (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "af_none",
+              "label": "None identified"
+            },
+            {
+              "id": "af_aah",
+              "label": "Atypical adenomatous hyperplasia"
+            },
+            {
+              "id": "af_tumorlets",
+              "label": "Tumorlets"
+            },
+            {
+              "id": "af_squamous_dysplasia",
+              "label": "Squamous dysplasia"
+            },
+            {
+              "id": "af_diffuse_ne_hyperplasia",
+              "label": "Diffuse neuroendocrine hyperplasia"
+            },
+            {
+              "id": "af_biopsy_site",
+              "label": "Biopsy site changes"
+            },
+            {
+              "id": "af_granulomatous",
+              "label": "Granulomatous inflammation (specify)"
+            },
+            {
+              "id": "af_postobstructive",
+              "label": "Post-obstructive changes"
+            },
+            {
+              "id": "af_fibrosis",
+              "label": "Fibrosis (specify pattern)"
+            },
+            {
+              "id": "af_emphysema",
+              "label": "Emphysema"
+            },
+            {
+              "id": "af_other",
+              "label": "Other (specify)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

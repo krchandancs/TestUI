@@ -1,0 +1,792 @@
+{
+  "id": "prostate_resection",
+  "name": "CAP Prostate Gland \u2014 Radical Prostatectomy",
+  "source": "CAP",
+  "version": "4.3.0.0",
+  "category": "PROSTATE",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "radical_prostatectomy",
+              "label": "Radical prostatectomy"
+            },
+            {
+              "id": "procedure_other",
+              "label": "Other (specify)"
+            },
+            {
+              "id": "procedure_not_specified",
+              "label": "Not specified"
+            }
+          ]
+        },
+        {
+          "id": "prostate_weight_g",
+          "label": "+ Prostate Weight (g)",
+          "type": "numeric",
+          "required": false,
+          "options": []
+        },
+        {
+          "id": "prostate_size_cm",
+          "label": "+ Prostate Size (cm)",
+          "type": "text",
+          "required": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "acinar_usual",
+              "label": "Acinar adenocarcinoma, conventional (usual)"
+            },
+            {
+              "id": "acinar_signet_ring",
+              "label": "Acinar adenocarcinoma, signet-ring-like cell"
+            },
+            {
+              "id": "acinar_pleomorphic",
+              "label": "Acinar adenocarcinoma, pleomorphic giant cell"
+            },
+            {
+              "id": "acinar_sarcomatoid",
+              "label": "Acinar adenocarcinoma, sarcomatoid"
+            },
+            {
+              "id": "acinar_pin_like",
+              "label": "Acinar adenocarcinoma, prostatic intraepithelial neoplasia-like"
+            },
+            {
+              "id": "intraductal_carcinoma",
+              "label": "Intraductal carcinoma"
+            },
+            {
+              "id": "ductal_adenocarcinoma",
+              "label": "Ductal adenocarcinoma"
+            },
+            {
+              "id": "adenosquamous",
+              "label": "Adenosquamous carcinoma"
+            },
+            {
+              "id": "squamous_cell",
+              "label": "Squamous cell carcinoma"
+            },
+            {
+              "id": "basal_cell",
+              "label": "Basal cell (adenoid cystic) carcinoma"
+            },
+            {
+              "id": "ne_adeno_diff",
+              "label": "Adenocarcinoma with neuroendocrine differentiation"
+            },
+            {
+              "id": "ne_well_diff",
+              "label": "Well-differentiated neuroendocrine tumor"
+            },
+            {
+              "id": "ne_small_cell",
+              "label": "Small cell neuroendocrine carcinoma"
+            },
+            {
+              "id": "ne_large_cell",
+              "label": "Large cell neuroendocrine carcinoma"
+            },
+            {
+              "id": "histologic_other",
+              "label": "Other histologic type not listed (specify)"
+            },
+            {
+              "id": "type_cannot_determine",
+              "label": "Carcinoma, type cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "grade_group",
+          "label": "Histologic Grade Group",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "gg1_3_3_6",
+              "label": "Grade group 1 (Gleason Score 3 + 3 = 6)"
+            },
+            {
+              "id": "gg2_3_4_7",
+              "label": "Grade group 2 (Gleason Score 3 + 4 = 7)"
+            },
+            {
+              "id": "gg3_4_3_7",
+              "label": "Grade group 3 (Gleason Score 4 + 3 = 7)"
+            },
+            {
+              "id": "gg4_4_4_8",
+              "label": "Grade group 4 (Gleason Score 4 + 4 = 8)"
+            },
+            {
+              "id": "gg4_3_5_8",
+              "label": "Grade group 4 (Gleason Score 3 + 5 = 8)"
+            },
+            {
+              "id": "gg4_5_3_8",
+              "label": "Grade group 4 (Gleason Score 5 + 3 = 8)"
+            },
+            {
+              "id": "gg5_4_5_9",
+              "label": "Grade group 5 (Gleason Score 4 + 5 = 9)"
+            },
+            {
+              "id": "gg5_5_4_9",
+              "label": "Grade group 5 (Gleason Score 5 + 4 = 9)"
+            },
+            {
+              "id": "gg5_5_5_10",
+              "label": "Grade group 5 (Gleason Score 5 + 5 = 10)"
+            },
+            {
+              "id": "grade_cannot_assess",
+              "label": "Cannot be assessed"
+            },
+            {
+              "id": "grade_not_applicable",
+              "label": "Not applicable"
+            }
+          ]
+        },
+        {
+          "id": "minor_tertiary_pattern5",
+          "label": "Minor Tertiary Pattern 5 (less than 5%) (required only if applicable)",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "tertiary_not_applicable",
+              "label": "Not applicable / not identified"
+            },
+            {
+              "id": "tertiary_present",
+              "label": "Present"
+            }
+          ]
+        },
+        {
+          "id": "idc_present",
+          "label": "Intraductal Carcinoma (IDC)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "idc_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "idc_present",
+              "label": "Present"
+            }
+          ]
+        },
+        {
+          "id": "cribriform_glands",
+          "label": "Cribriform Glands (applicable to Gleason score 7 or 8 only)",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "cribriform_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "cribriform_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "cribriform_present",
+              "label": "Present"
+            },
+            {
+              "id": "cribriform_cannot_determine",
+              "label": "Cannot be determined (explain)"
+            }
+          ]
+        },
+        {
+          "id": "treatment_effect",
+          "label": "Treatment Effect (select all that apply)",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "tx_no_presurgical",
+              "label": "No known presurgical therapy"
+            },
+            {
+              "id": "tx_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "tx_radiation",
+              "label": "Radiation therapy effect present"
+            },
+            {
+              "id": "tx_hormonal",
+              "label": "Hormonal therapy effect present"
+            },
+            {
+              "id": "tx_other",
+              "label": "Other therapy effect(s) present (specify)"
+            },
+            {
+              "id": "tx_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor_quantitation",
+      "title": "Tumor Quantitation",
+      "fields": [
+        {
+          "id": "tumor_quantitation_method",
+          "label": "Tumor Quantitation Method (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "quantitation_percentage",
+              "label": "Via percentage"
+            },
+            {
+              "id": "quantitation_dimension",
+              "label": "Via dimension"
+            }
+          ]
+        },
+        {
+          "id": "estimated_pct_involved",
+          "label": "Estimated Percentage of Prostate Involved by Tumor",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "pct_lt1",
+              "label": "Less than 1%"
+            },
+            {
+              "id": "pct_1_5",
+              "label": "1 - 5%"
+            },
+            {
+              "id": "pct_6_10",
+              "label": "6 - 10%"
+            },
+            {
+              "id": "pct_11_20",
+              "label": "11 - 20%"
+            },
+            {
+              "id": "pct_21_30",
+              "label": "21 - 30%"
+            },
+            {
+              "id": "pct_31_40",
+              "label": "31 - 40%"
+            },
+            {
+              "id": "pct_41_50",
+              "label": "41 - 50%"
+            },
+            {
+              "id": "pct_51_60",
+              "label": "51 - 60%"
+            },
+            {
+              "id": "pct_61_70",
+              "label": "61 - 70%"
+            },
+            {
+              "id": "pct_71_80",
+              "label": "71 - 80%"
+            },
+            {
+              "id": "pct_81_90",
+              "label": "81 - 90%"
+            },
+            {
+              "id": "pct_gt90",
+              "label": "Greater than 90%"
+            },
+            {
+              "id": "pct_cannot_determine",
+              "label": "Cannot be determined (explain)"
+            }
+          ]
+        },
+        {
+          "id": "dominant_nodule_mm",
+          "label": "+ Greatest Dimension of Dominant Nodule (mm)",
+          "type": "numeric",
+          "required": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "extension",
+      "title": "Extension & Invasion",
+      "fields": [
+        {
+          "id": "extraprostatic_extension",
+          "label": "Extraprostatic Extension (EPE)",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "epe_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "epe_present_focal",
+              "label": "Present, focal"
+            },
+            {
+              "id": "epe_present_nonfocal",
+              "label": "Present, nonfocal"
+            },
+            {
+              "id": "epe_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "bladder_neck_invasion",
+          "label": "Urinary Bladder Neck Invasion",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "bn_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "bn_present",
+              "label": "Present"
+            },
+            {
+              "id": "bn_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "seminal_vesicle_invasion",
+          "label": "Seminal Vesicle Invasion",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "sv_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "sv_present_right",
+              "label": "Present, right"
+            },
+            {
+              "id": "sv_present_left",
+              "label": "Present, left"
+            },
+            {
+              "id": "sv_present_bilateral",
+              "label": "Present, bilateral"
+            },
+            {
+              "id": "sv_laterality_cannot_determine",
+              "label": "Present, laterality cannot be determined"
+            },
+            {
+              "id": "sv_not_present",
+              "label": "No seminal vesicle present"
+            }
+          ]
+        },
+        {
+          "id": "lymphovascular_invasion",
+          "label": "Lymphatic and/or Vascular Invasion",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "lvi_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "lvi_present",
+              "label": "Present"
+            },
+            {
+              "id": "lvi_cannot_determine",
+              "label": "Cannot be determined (explain)"
+            }
+          ]
+        },
+        {
+          "id": "perineural_invasion",
+          "label": "+ Perineural Invasion",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "pni_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "pni_present",
+              "label": "Present"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status",
+          "label": "Margin Status",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "margin_cannot_assess",
+              "label": "Cannot be assessed"
+            },
+            {
+              "id": "all_margins_negative",
+              "label": "All margins negative for invasive carcinoma"
+            },
+            {
+              "id": "margin_involved",
+              "label": "Invasive carcinoma present at margin"
+            }
+          ]
+        },
+        {
+          "id": "margins_involved",
+          "label": "Margin(s) Involved by Invasive Carcinoma (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "margin_status",
+            "answerId": "margin_involved"
+          },
+          "options": [
+            {
+              "id": "margin_right_apical",
+              "label": "Right apical"
+            },
+            {
+              "id": "margin_right_bladder_neck",
+              "label": "Right bladder neck"
+            },
+            {
+              "id": "margin_right_anterior",
+              "label": "Right anterior"
+            },
+            {
+              "id": "margin_right_lateral",
+              "label": "Right lateral"
+            },
+            {
+              "id": "margin_right_posterolateral",
+              "label": "Right posterolateral (neurovascular bundle)"
+            },
+            {
+              "id": "margin_right_posterior",
+              "label": "Right posterior"
+            },
+            {
+              "id": "margin_left_apical",
+              "label": "Left apical"
+            },
+            {
+              "id": "margin_left_bladder_neck",
+              "label": "Left bladder neck"
+            },
+            {
+              "id": "margin_left_anterior",
+              "label": "Left anterior"
+            },
+            {
+              "id": "margin_left_lateral",
+              "label": "Left lateral"
+            },
+            {
+              "id": "margin_left_posterolateral",
+              "label": "Left posterolateral (neurovascular bundle)"
+            },
+            {
+              "id": "margin_left_posterior",
+              "label": "Left posterior"
+            },
+            {
+              "id": "margin_other",
+              "label": "Other (specify)"
+            },
+            {
+              "id": "margin_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lymph_nodes",
+      "title": "Regional Lymph Nodes",
+      "fields": [
+        {
+          "id": "regional_ln_status",
+          "label": "Regional Lymph Node Status",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "ln_not_applicable",
+              "label": "Not applicable (no regional lymph nodes submitted or found)"
+            },
+            {
+              "id": "ln_present",
+              "label": "Regional lymph nodes present"
+            },
+            {
+              "id": "ln_all_negative",
+              "label": "All regional lymph nodes negative for tumor"
+            },
+            {
+              "id": "ln_tumor_present",
+              "label": "Tumor present in regional lymph node(s)"
+            }
+          ]
+        },
+        {
+          "id": "ln_number_positive",
+          "label": "Number of Lymph Nodes with Tumor",
+          "type": "numeric",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "regional_ln_status",
+            "answerId": "ln_tumor_present"
+          },
+          "options": []
+        },
+        {
+          "id": "ln_number_examined",
+          "label": "Number of Lymph Nodes Examined",
+          "type": "numeric",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "regional_ln_status",
+            "answerId": "ln_present"
+          },
+          "options": []
+        },
+        {
+          "id": "extranodal_extension",
+          "label": "+ Extranodal Extension",
+          "type": "dropdown",
+          "required": false,
+          "visibleWhen": {
+            "fieldId": "regional_ln_status",
+            "answerId": "ln_tumor_present"
+          },
+          "options": [
+            {
+              "id": "ene_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "ene_present",
+              "label": "Present"
+            },
+            {
+              "id": "ene_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staging",
+      "title": "pTNM Classification (AJCC 8th Edition)",
+      "fields": [
+        {
+          "id": "tnm_modifiers",
+          "label": "Modified Classification (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "tnm_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "tnm_y",
+              "label": "y (post-neoadjuvant therapy)"
+            },
+            {
+              "id": "tnm_r",
+              "label": "r (recurrence)"
+            }
+          ]
+        },
+        {
+          "id": "pT_category",
+          "label": "pT Category",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "pT2",
+              "label": "pT2: Organ confined"
+            },
+            {
+              "id": "pT3a",
+              "label": "pT3a: Extraprostatic extension or microscopic bladder neck invasion"
+            },
+            {
+              "id": "pT3b",
+              "label": "pT3b: Tumor invades seminal vesicle(s)"
+            },
+            {
+              "id": "pT3_subcategory_unknown",
+              "label": "pT3 (subcategory cannot be determined)"
+            },
+            {
+              "id": "pT4",
+              "label": "pT4: Tumor invades adjacent structures"
+            }
+          ]
+        },
+        {
+          "id": "pN_category",
+          "label": "pN Category",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "pN_not_assigned_no_nodes",
+              "label": "pN not assigned (no nodes submitted or found)"
+            },
+            {
+              "id": "pN_not_assigned_unknown",
+              "label": "pN not assigned (cannot be determined)"
+            },
+            {
+              "id": "pN0",
+              "label": "pN0: No positive regional nodes"
+            },
+            {
+              "id": "pN1",
+              "label": "pN1: Metastasis in regional nodes"
+            }
+          ]
+        },
+        {
+          "id": "pM_category",
+          "label": "pM Category (required only if confirmed pathologically)",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "pM_not_applicable",
+              "label": "Not applicable - pM cannot be determined"
+            },
+            {
+              "id": "pM1a",
+              "label": "pM1a: Nonregional lymph node(s)"
+            },
+            {
+              "id": "pM1b",
+              "label": "pM1b: Bone(s)"
+            },
+            {
+              "id": "pM1c",
+              "label": "pM1c: Other site(s) with or without bone disease"
+            },
+            {
+              "id": "pM1_subcategory_unknown",
+              "label": "pM1 (subcategory cannot be determined)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings",
+          "label": "+ Additional Findings (select all that apply)",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "af_none",
+              "label": "None identified"
+            },
+            {
+              "id": "af_aip",
+              "label": "Atypical intraductal proliferation (AIP)"
+            },
+            {
+              "id": "af_hgpin",
+              "label": "High-grade prostatic intraepithelial neoplasia (PIN)"
+            },
+            {
+              "id": "af_adenosis",
+              "label": "Atypical adenomatous hyperplasia (adenosis)"
+            },
+            {
+              "id": "af_nodular_hyperplasia",
+              "label": "Nodular prostatic hyperplasia"
+            },
+            {
+              "id": "af_inflammation",
+              "label": "Inflammation (specify type)"
+            },
+            {
+              "id": "af_other",
+              "label": "Other (specify)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

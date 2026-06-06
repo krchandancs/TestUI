@@ -1,0 +1,518 @@
+{
+  "id": "skin_melanoma_bx",
+  "name": "CAP Melanoma of the Skin \u2014 Biopsy/Excision",
+  "source": "CAP",
+  "version": "1.1.0.0",
+  "category": "SKIN",
+  "sections": [
+    {
+      "id": "specimen",
+      "title": "Specimen",
+      "fields": [
+        {
+          "id": "procedure",
+          "label": "Procedure",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "biopsy_shave",
+              "label": "Biopsy, shave"
+            },
+            {
+              "id": "biopsy_punch",
+              "label": "Biopsy, punch"
+            },
+            {
+              "id": "biopsy_incisional",
+              "label": "Biopsy, incisional"
+            },
+            {
+              "id": "procedure_other",
+              "label": "Other"
+            },
+            {
+              "id": "procedure_not_specified",
+              "label": "Not specified"
+            }
+          ]
+        },
+        {
+          "id": "specimen_laterality",
+          "label": "Specimen Laterality",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "right",
+              "label": "Right"
+            },
+            {
+              "id": "left",
+              "label": "Left"
+            },
+            {
+              "id": "midline",
+              "label": "Midline"
+            },
+            {
+              "id": "laterality_not_specified",
+              "label": "Not specified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tumor",
+      "title": "Tumor",
+      "fields": [
+        {
+          "id": "tumor_site",
+          "label": "Tumor Site",
+          "type": "checkboxes",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "multiple_primary_sites",
+          "label": "Multiple Primary Sites",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "multiple_primary_not_applicable",
+              "label": "Not applicable (no additional primary site(s) present)"
+            },
+            {
+              "id": "multiple_primary_present",
+              "label": "Present"
+            }
+          ]
+        },
+        {
+          "id": "histologic_type",
+          "label": "Histologic Type",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "histologic_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "low_csd_melanoma",
+              "label": "Low-cumulative sun damage (CSD) melanoma (including superficial spreading melanoma)"
+            },
+            {
+              "id": "lentigo_maligna_melanoma",
+              "label": "Lentigo maligna melanoma (high-CSD melanoma)"
+            },
+            {
+              "id": "desmoplastic_pure",
+              "label": "Desmoplastic melanoma, pure (greater than or equal to 90% desmoplastic melanoma)"
+            },
+            {
+              "id": "desmoplastic_mixed",
+              "label": "Mixed desmoplastic/non-desmoplastic melanoma (less than 90% desmoplastic melanoma)"
+            },
+            {
+              "id": "spitz_melanoma",
+              "label": "Spitz melanoma (malignant Spitz tumor)"
+            },
+            {
+              "id": "acral_melanoma",
+              "label": "Acral melanoma"
+            },
+            {
+              "id": "melanoma_giant_congenital_nevus",
+              "label": "Melanoma arising in a giant congenital nevus"
+            },
+            {
+              "id": "melanoma_blue_nevus",
+              "label": "Melanoma arising in a blue nevus"
+            },
+            {
+              "id": "nodular_melanoma",
+              "label": "Nodular melanoma"
+            },
+            {
+              "id": "nevoid_melanoma",
+              "label": "Nevoid melanoma"
+            },
+            {
+              "id": "dermal_melanoma",
+              "label": "Dermal melanoma"
+            },
+            {
+              "id": "melanoma_nos",
+              "label": "Melanoma, NOS"
+            },
+            {
+              "id": "histologic_other",
+              "label": "Other histologic type not listed"
+            }
+          ]
+        },
+        {
+          "id": "breslow_thickness",
+          "label": "Maximum Tumor (Breslow) Thickness in Millimeters (mm)",
+          "type": "text",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "ulceration",
+          "label": "Ulceration",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "ulceration_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "ulceration_present",
+              "label": "Present"
+            }
+          ]
+        },
+        {
+          "id": "anatomic_clark_level",
+          "label": "Anatomic (Clark) Level",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "clark_ii",
+              "label": "II (melanoma present in but does not fill and/or expand papillary dermis)"
+            },
+            {
+              "id": "clark_iii",
+              "label": "III (melanoma fills and expands papillary dermis)"
+            },
+            {
+              "id": "clark_iv",
+              "label": "IV (melanoma invades reticular dermis)"
+            },
+            {
+              "id": "clark_v",
+              "label": "V (melanoma invades subcutis)"
+            },
+            {
+              "id": "clark_at_least_ii",
+              "label": "At least level II"
+            },
+            {
+              "id": "clark_at_least_iii",
+              "label": "At least level III"
+            },
+            {
+              "id": "clark_at_least_iv",
+              "label": "At least level IV"
+            },
+            {
+              "id": "clark_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "mitotic_rate",
+          "label": "Mitotic Rate",
+          "type": "text",
+          "required": true,
+          "options": []
+        },
+        {
+          "id": "macroscopic_satellite_lesions",
+          "label": "Macroscopic Satellite Lesions",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "macroscopic_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "macroscopic_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "macroscopic_present",
+              "label": "Present"
+            },
+            {
+              "id": "macroscopic_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "microsatellites",
+          "label": "Microsatellite(s)",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "microsatellites_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "microsatellites_present",
+              "label": "Present"
+            },
+            {
+              "id": "microsatellites_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "lymphatic_vascular_invasion",
+          "label": "Lymphatic and/or Vascular Invasion",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "lvi_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "lvi_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "lvi_present",
+              "label": "Present"
+            },
+            {
+              "id": "lvi_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "neurotropism",
+          "label": "Neurotropism",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            {
+              "id": "neurotropism_not_applicable",
+              "label": "Not applicable"
+            },
+            {
+              "id": "neurotropism_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "neurotropism_present",
+              "label": "Present"
+            },
+            {
+              "id": "neurotropism_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "tumor_infiltrating_lymphocytes",
+          "label": "Tumor-Infiltrating Lymphocytes",
+          "type": "dropdown",
+          "required": false,
+          "options": [
+            {
+              "id": "til_not_identified",
+              "label": "Not identified"
+            },
+            {
+              "id": "til_non_brisk",
+              "label": "Present, non-brisk"
+            },
+            {
+              "id": "til_brisk",
+              "label": "Present, brisk"
+            },
+            {
+              "id": "til_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "tumor_regression",
+          "label": "Tumor Regression",
+          "type": "text",
+          "required": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "margins",
+      "title": "Margins",
+      "fields": [
+        {
+          "id": "margin_status_melanoma",
+          "label": "Margin Status for Melanoma",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "all_margins_negative",
+              "label": "All margins negative for melanoma (e.g., in situ, invasive, or satellite)"
+            },
+            {
+              "id": "invasive_melanoma_present_at_margin",
+              "label": "Invasive melanoma present at margin"
+            },
+            {
+              "id": "melanoma_in_situ_present_at_margin",
+              "label": "Melanoma in situ present at margin"
+            }
+          ]
+        },
+        {
+          "id": "margins_involved_invasive",
+          "label": "Margin(s) Involved by Invasive Melanoma",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "invasive_margin_peripheral",
+              "label": "Peripheral"
+            },
+            {
+              "id": "invasive_margin_deep",
+              "label": "Deep"
+            },
+            {
+              "id": "invasive_margin_other",
+              "label": "Other"
+            },
+            {
+              "id": "invasive_margin_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "margins_involved_in_situ",
+          "label": "Margin(s) Involved by Melanoma In Situ",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "insitu_margin_peripheral",
+              "label": "Peripheral"
+            },
+            {
+              "id": "insitu_margin_deep",
+              "label": "Deep"
+            },
+            {
+              "id": "insitu_margin_other",
+              "label": "Other"
+            },
+            {
+              "id": "insitu_margin_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "margin_involvement_satellites",
+          "label": "Margin Involvement by Satellite(s)",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "satellite_margin_not_applicable",
+              "label": "Not applicable (satellite(s) absent)"
+            },
+            {
+              "id": "satellite_margin_peripheral",
+              "label": "Peripheral"
+            },
+            {
+              "id": "satellite_margin_deep",
+              "label": "Deep"
+            },
+            {
+              "id": "satellite_margin_other",
+              "label": "Other"
+            },
+            {
+              "id": "satellite_margin_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        },
+        {
+          "id": "margin_involvement_regression",
+          "label": "Margin Involvement by Tumor Regression",
+          "type": "checkboxes",
+          "required": true,
+          "options": [
+            {
+              "id": "regression_margin_not_applicable",
+              "label": "Not applicable (tumor regression absent)"
+            },
+            {
+              "id": "regression_margin_peripheral",
+              "label": "Peripheral"
+            },
+            {
+              "id": "regression_margin_deep",
+              "label": "Deep"
+            },
+            {
+              "id": "regression_margin_other",
+              "label": "Other"
+            },
+            {
+              "id": "regression_margin_cannot_determine",
+              "label": "Cannot be determined"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "additional_findings",
+      "title": "Additional Findings",
+      "fields": [
+        {
+          "id": "additional_findings",
+          "label": "Additional Findings",
+          "type": "checkboxes",
+          "required": false,
+          "options": [
+            {
+              "id": "associated_nevus",
+              "label": "Associated nevus"
+            },
+            {
+              "id": "additional_other",
+              "label": "Other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "fields": [
+        {
+          "id": "comments",
+          "label": "Comment(s)",
+          "type": "text",
+          "required": true,
+          "options": []
+        }
+      ]
+    }
+  ]
+}

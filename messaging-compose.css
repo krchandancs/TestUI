@@ -1,0 +1,527 @@
+/* ============================================================
+   MESSAGING — COMPOSE PANEL & USER SEARCH OVERLAY
+   Append these rules to pathscribe.css
+   ============================================================ */
+
+/* ── Compose panel shell ──────────────────────────────────── */
+.ps-compose-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ps-compose-body {
+  flex: 1;
+  padding: 16px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ── Form rows ────────────────────────────────────────────── */
+.ps-compose-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+/* To: row wraps so chips can grow; label pins to top */
+.ps-compose-row--to {
+  align-items: flex-start;
+  padding-top: 12px;
+}
+
+.ps-compose-row--to .ps-compose-label {
+  padding-top: 5px; /* optical alignment with first chip / input */
+}
+
+/* ── Labels ───────────────────────────────────────────────── */
+.ps-compose-label {
+  width: 64px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #8aaccc;
+  line-height: 1;
+}
+
+/* ── Plain text input (Subject) ───────────────────────────── */
+.ps-compose-field-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e8f0fc;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: inherit;
+  padding: 2px 0;
+}
+
+.ps-compose-field-input::placeholder {
+  color: #6b7f99;   /* 4.59:1 ✅ — was #4e6a82 (3.32:1 ❌) */
+}
+
+/* ── To: field area ───────────────────────────────────────── */
+.ps-compose-to-field {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  position: relative;
+}
+
+/* Recipient chips */
+.ps-compose-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px 3px 10px;
+  background: rgba(8, 145, 178, 0.12);
+  border: 1px solid rgba(8, 145, 178, 0.3);
+  border-radius: 20px;
+  font-size: 12.5px;
+  color: #7dcfea;
+  font-weight: 500;
+}
+
+.ps-compose-chip-remove {
+  background: none;
+  border: none;
+  color: rgba(125, 207, 234, 0.5);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.12s;
+}
+
+.ps-compose-chip-remove:hover {
+  color: #EF4444;
+}
+
+/* Inline To: text input */
+.ps-compose-to-input {
+  flex: 1;
+  min-width: 120px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e8f0fc;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: inherit;
+  padding: 2px 0;
+}
+
+.ps-compose-to-input::placeholder {
+  color: #6b7f99;   /* 4.59:1 ✅ — was #4e6a82 (3.32:1 ❌) */
+}
+
+/* Spyglass button */
+.ps-compose-search-btn {
+  background: none;
+  border: none;
+  color: #7a95b0;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.ps-compose-search-btn:hover {
+  color: #0891B2;
+}
+
+/* ── Inline suggestion dropdown ───────────────────────────── */
+.ps-compose-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #0f1d2e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  margin-top: 4px;
+}
+
+.ps-compose-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.1s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ps-compose-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.ps-compose-dropdown-item:hover,
+.ps-compose-dropdown-item.highlighted {
+  background: rgba(8, 145, 178, 0.12);
+}
+
+.ps-compose-dropdown-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #162036;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.ps-compose-dropdown-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #d0daea;
+}
+
+.ps-compose-dropdown-role {
+  font-size: 11px;
+  color: #7a95b0;
+}
+
+/* ── Options bar (Urgent / Cancel / Secure Email / Send) ──── */
+.ps-compose-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ps-compose-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Urgent toggle */
+.ps-compose-urgent-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  color: #94a3b8;                           /* 7.34:1 ✅ — was #64748b (3.96:1 ❌) */
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 9px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.ps-compose-urgent-btn:hover {
+  color: #EF4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.ps-compose-urgent-btn.active {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #EF4444;
+}
+
+/* Cancel */
+.ps-compose-cancel-btn {
+  background: rgba(255, 255, 255, 0.07);   /* visible ghost surface */
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 7px;
+  padding: 6px 18px;                        /* wider for easier tap target */
+  min-height: 34px;
+  cursor: pointer;
+  color: #b8c8d8;                           /* 11.02:1 ✅ — was #64748b (3.96:1 ❌) */
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.ps-compose-cancel-btn:hover {
+  background: rgba(239, 68, 68, 0.10);      /* subtle red → signals "discard" */
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+}
+
+/* Secure Email */
+.ps-compose-secure-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(56, 189, 248, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 7px;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.ps-compose-secure-btn:hover:not(.disabled) {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.ps-compose-secure-btn.disabled {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #6b7f99;   /* 4.59:1 ✅ — was #3a5266 (2.31:1 ❌) */
+  cursor: not-allowed;
+}
+
+/* Send */
+.ps-compose-send-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #076f92;                      /* 5.68:1 ✅ — was #0891B2 (3.68:1 ❌) */
+  border: none;
+  border-radius: 7px;
+  padding: 6px 16px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.ps-compose-send-btn:hover:not(.disabled) {
+  background: #087fa8;
+  transform: translateY(-1px);
+}
+
+.ps-compose-send-btn.disabled {
+  background: #0e1726;
+  color: #6b7f99;   /* 4.59:1 ✅ — was #3a5266 (2.31:1 ❌) */
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Message body textarea ────────────────────────────────── */
+.ps-compose-textarea {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #d0daea;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.7;
+  resize: none;
+  margin-top: 16px;
+  min-height: 120px;
+}
+
+.ps-compose-textarea::placeholder {
+  color: #6b7f99;   /* 4.59:1 ✅ — was #3a5266 (2.31:1 ❌) */
+}
+
+/* ── User search modal ────────────────────────────────────── */
+.ps-user-search-modal {
+  background: #0d1a2a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+.ps-user-search-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 18px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ps-user-search-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e8f0fc;
+}
+
+.ps-user-search-close {
+  background: none;
+  border: none;
+  color: #7a95b0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0 4px;
+  transition: color 0.15s;
+}
+
+.ps-user-search-close:hover {
+  color: #d0daea;
+}
+
+.ps-user-search-input-wrap {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ps-user-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #162036;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: border-color 0.15s;
+}
+
+.ps-user-search-bar:focus-within {
+  border-color: rgba(8, 145, 178, 0.4);
+}
+
+.ps-user-search-bar svg {
+  color: #8aaccc;
+  flex-shrink: 0;
+}
+
+.ps-user-search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #d0daea;
+  font-size: 13.5px;
+  font-family: inherit;
+}
+
+.ps-user-search-input::placeholder {
+  color: #6b7f99;   /* 4.59:1 ✅ — was #4e6a82 (3.32:1 ❌) */
+}
+
+.ps-user-search-results {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.ps-user-search-results::-webkit-scrollbar { width: 4px; }
+.ps-user-search-results::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+
+.ps-user-search-empty {
+  padding: 18px 16px;
+  text-align: center;
+  color: #7a95b0;
+  font-size: 13px;
+}
+
+.ps-user-search-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.1s;
+}
+
+.ps-user-search-item:last-child {
+  border-bottom: none;
+}
+
+.ps-user-search-item:hover {
+  background: rgba(8, 145, 178, 0.09);
+}
+
+.ps-user-search-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #162036;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.ps-user-search-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #d0daea;
+}
+
+.ps-user-search-role {
+  font-size: 11.5px;
+  color: #7a95b0;
+  margin-top: 1px;
+}
+
+.ps-user-search-footer {
+  padding: 10px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ps-user-search-cancel {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  color: #7a95b0;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.ps-user-search-cancel:hover {
+  color: #d0daea;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ── User search overlay backdrop z-index ─────────────────── */
+/* Must sit above the messages drawer (z-index: 20000) */
+.ps-user-search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 21000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
